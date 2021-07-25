@@ -4,6 +4,9 @@ from django.shortcuts import render
 from selenium import webdriver
 from time import sleep
 
+def intro(request):
+    return render(request, 'index/data.html')
+
 def index(request):
     kw = request.GET.get('kw', '')  # 검색어
 
