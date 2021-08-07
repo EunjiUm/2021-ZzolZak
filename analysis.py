@@ -276,6 +276,6 @@ def Data_Nlp():
 
     print("NLP 종료")
 
-product_code = "054006" # 백팩
-#Data_Crawling(product_code)
+product_code = "054007" # 웨이스트백
+Data_Crawling(product_code)
 Data_Nlp()
