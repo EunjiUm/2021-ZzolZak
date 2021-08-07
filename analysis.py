@@ -217,7 +217,7 @@ def Data_Nlp():
     ).save()
 
     # 형용사만 추출하여 감정분석
-    file = open('C:/test.txt', 'r', encoding='utf-8')
+    file = open('C:/review.txt', 'r', encoding='utf-8')
     reviews = file.read()
 
     okt = Okt()
@@ -273,4 +273,6 @@ def Data_Nlp():
             group=nodes[i]["group"],
         ).save()
 
-product_code = "001001" # 인기 티셔츠
+product_code = "054006" # 백팩
+Data_Crawling(product_code)
+Data_Nlp()
