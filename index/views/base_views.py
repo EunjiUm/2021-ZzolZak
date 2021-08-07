@@ -3,9 +3,55 @@ from bs4 import BeautifulSoup
 from django.shortcuts import render
 from selenium import webdriver
 from time import sleep
+from ..models import FashionScore
+from ..models import SentScore
 
 def intro(request):
-    return render(request, 'index/data.html')
+    value = FashionScore.objects.values()
+    sent_list = SentScore.objects.all()
+
+    Jan = value[0]['Jan']
+    Feb = value[0]['Feb']
+    Mar = value[0]['Mar']
+    Apr = value[0]['Apr']
+    May = value[0]['May']
+    June = value[0]['June']
+    July = value[0]['July']
+    Aug = value[0]['Aug']
+    Sep = value[0]['Sep']
+    Oct = value[0]['Oct']
+    Nov = value[0]['Nov']
+    Dec = value[0]['Dec']
+
+    month_1 = value[0]['month_1']
+    month_2 = value[0]['month_2']
+    month_3 = value[0]['month_3']
+
+    positive_value = value[0]['positive_value']
+    negative_value = value[0]['negative_value']
+    neutral_value = value[0]['neutral_value']
+
+    context = {'Jan': Jan,
+               'Feb': Feb,
+               'Mar': Mar,
+               'Apr': Apr,
+               'May': May,
+               'June': June,
+               'July': July,
+               'Aug': Aug,
+               'Sep': Sep,
+               'Oct': Oct,
+               'Nov': Nov,
+               'Dec': Dec,
+               'month_1': month_1,
+               'month_2': month_2,
+               'month_3': month_3,
+               'positive_value' : positive_value,
+               'negative_value' : negative_value,
+               'neutral_value' : neutral_value,
+               'sent_list' : sent_list
+               }
+    return render(request, 'index/data.html', context)
 
 def index(request):
     kw = request.GET.get('kw', '')  # 검색어
@@ -109,3 +155,6 @@ def index(request):
 
     context = {'kw': kw}
     return render(request, 'index/main.html', context)
+
+def ranking(request):
+    return render(request, 'index/ranking.html')
