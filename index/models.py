@@ -18,14 +18,15 @@ class FashionScore(models.Model):
     month_2 = models.PositiveIntegerField(default=0)
     month_3 = models.PositiveIntegerField(default=0)
 
-    positive_value = models.PositiveIntegerField(default=0)
-    neutral_value = models.PositiveIntegerField(default=0)
-    negative_value = models.PositiveIntegerField(default=0)
-
 class SentScore(models.Model):
     name = models.CharField(max_length=200)
     value = models.PositiveIntegerField(default=0)
     group = models.CharField(max_length=200)
+
+class SentValue(models.Model):
+    positive_value = models.PositiveIntegerField(default=0)
+    neutral_value = models.PositiveIntegerField(default=0)
+    negative_value = models.PositiveIntegerField(default=0)
 
 class Ranking(models.Model):
     ranking_name = models.CharField(max_length=50)

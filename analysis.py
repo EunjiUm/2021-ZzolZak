@@ -1,6 +1,8 @@
 import os
-import re
 import django
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", 'config.settings')
+django.setup()
+import re
 import requests
 from collections import Counter
 from konlpy.tag import Okt
@@ -9,9 +11,7 @@ from time import sleep
 from bs4 import BeautifulSoup
 from google.cloud import language_v1
 from selenium import webdriver
-from index.models import FashionScore, SentScore
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", 'config.settings')
-django.setup()
+from index.models import FashionScore, SentScore, SentValue
 
 def Data_Crawling(product_code):
     goods_code = product_code  # goods_code에 따라 크롤링할 품목이 변경됩니다.
@@ -171,6 +171,7 @@ def Data_Crawling(product_code):
                  ).save()
 
 def Data_Nlp():
+    print("NLP 시작")
     # 각 문장마다 감정분석
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:\\trendanalyzer-314714-b95748a6864c.json"
 
@@ -210,7 +211,7 @@ def Data_Nlp():
     negative_value = int(negative_value / total_value * 100)
     neutral_value = int(neutral_value / total_value * 100)
 
-    FashionScore(
+    SentValue(
         positive_value=positive_value,
         negative_value=negative_value,
         neutral_value=neutral_value,
@@ -273,6 +274,8 @@ def Data_Nlp():
             group=nodes[i]["group"],
         ).save()
 
+    print("NLP 종료")
+
 product_code = "054006" # 백팩
-Data_Crawling(product_code)
+#Data_Crawling(product_code)
 Data_Nlp()

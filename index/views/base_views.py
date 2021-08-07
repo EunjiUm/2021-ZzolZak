@@ -3,33 +3,33 @@ from bs4 import BeautifulSoup
 from django.shortcuts import render
 from selenium import webdriver
 from time import sleep
-from ..models import FashionScore
-from ..models import SentScore
+from ..models import FashionScore, SentScore, SentValue
 
 def intro(request):
-    value = FashionScore.objects.values()
+    month_value = FashionScore.objects.values()
+    sent_value = SentValue.objects.values()
     sent_list = SentScore.objects.all()
 
-    Jan = value[0]['Jan']
-    Feb = value[0]['Feb']
-    Mar = value[0]['Mar']
-    Apr = value[0]['Apr']
-    May = value[0]['May']
-    June = value[0]['June']
-    July = value[0]['July']
-    Aug = value[0]['Aug']
-    Sep = value[0]['Sep']
-    Oct = value[0]['Oct']
-    Nov = value[0]['Nov']
-    Dec = value[0]['Dec']
+    Jan = month_value[0]['Jan']
+    Feb = month_value[0]['Feb']
+    Mar = month_value[0]['Mar']
+    Apr = month_value[0]['Apr']
+    May = month_value[0]['May']
+    June = month_value[0]['June']
+    July = month_value[0]['July']
+    Aug = month_value[0]['Aug']
+    Sep = month_value[0]['Sep']
+    Oct = month_value[0]['Oct']
+    Nov = month_value[0]['Nov']
+    Dec = month_value[0]['Dec']
 
-    month_1 = value[0]['month_1']
-    month_2 = value[0]['month_2']
-    month_3 = value[0]['month_3']
+    month_1 = month_value[0]['month_1']
+    month_2 = month_value[0]['month_2']
+    month_3 = month_value[0]['month_3']
 
-    positive_value = value[0]['positive_value']
-    negative_value = value[0]['negative_value']
-    neutral_value = value[0]['neutral_value']
+    positive_value = sent_value[0]['positive_value']
+    negative_value = sent_value[0]['negative_value']
+    neutral_value = sent_value[0]['neutral_value']
 
     context = {'Jan': Jan,
                'Feb': Feb,

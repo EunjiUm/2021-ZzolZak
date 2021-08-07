@@ -9,7 +9,7 @@
                 <canvas id="FashionChart" height="50vh" aria-label="Site statistics" role="img"></canvas>
             </div>
             <div class="chart-detail">
-                <h2 style="text-align: center;">아우터는 {{month_1}}월, {{month_2}}월, {{month_3}}월에 입기 좋아요</h2>
+                <h2 style="text-align: center;">{{month_1}}월, {{month_2}}월, {{month_3}}월에 입기 좋아요</h2>
             </div>
         </div>
     </div>
@@ -24,6 +24,7 @@
             <table>
                 <thead>
                 <tr>
+                    <th>랭킹</th>
                     <th>감성어</th>
                     <th>언급량</th>
                     <th>분류</th>
@@ -33,6 +34,7 @@
                 {% if sent_list %}
                 {% for sent in sent_list %}
                 <tr class="text-center">
+                    <td>{{ sent.id }}위</td>
                     <td class="text-center">
                         {{ sent.name }}
                     </td>
@@ -156,7 +158,7 @@
             .data(graph.nodes)
             .enter().append("circle")
             .attr("class", "node")
-            .attr("r", function (d) { return d.value * 10; })
+            .attr("r", function (d) { return d.value })
             .style("fill", function (d) {
                 if(d.group == "긍정") // 긍정에 대한 색깔
                     return 'rgb(103, 150, 220)';
@@ -173,7 +175,7 @@
             .attr("class", "label")
             .attr("fill", "white")
             .attr("text-anchor", "middle")
-            .attr("font-size", function(d) { return d.value * 3})
+            .attr("font-size", function(d) { return d.value / 2 })
             .text(function (d) { return d.name; });
 
         force.on("tick", function () {
