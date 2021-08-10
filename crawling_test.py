@@ -5,7 +5,6 @@ import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
-
 def Data_Crawling(product_code):
     goods_code = product_code  # goods_code에 따라 크롤링할 품목이 변경됩니다.
 

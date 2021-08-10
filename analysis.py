@@ -51,9 +51,9 @@ def Data_Crawling(product_code):
     # ---- 팝업체크 끝---- #
     # ---- driver 기본 세팅 끝 ---- #
 
-    f = open("C:/review.txt", 'w', encoding='utf-8') # C 드라이브에 위치하는 review.txt 파일 읽기전용으로 열기, review.txt 파일은 미리 생성해놔야 함
+    f = open("C:/review.txt", 'w', encoding='utf-8') # C 드라이브에 위치하는 review.txt 파일 쓰기전용으로 열기, review.txt 파일은 미리 생성해놔야 함
 
-    review_list = []   #  리뷰 작성 날짜를 담기 위한 리스트
+    review_list = []   #  리뷰를 담기 위한 리스트
     origin_list = [0] * 12
     copied_list = [0] * 12
 
@@ -87,7 +87,6 @@ def Data_Crawling(product_code):
             else:  # 리뷰 개수 >= 11
                 cnt = 0
                 reviews_per_page = 10
-
                 while True:
                     for button_num in range(3, 8): # 3번째 버튼(첫 페이지), 7번째 버튼(끝 페이지)
                         if cnt == review_num:
@@ -272,3 +271,4 @@ def Data_Nlp():
 product_code = "054007" # 웨이스트백
 Data_Crawling(product_code)
 Data_Nlp()
+
