@@ -158,7 +158,7 @@
             .data(graph.nodes)
             .enter().append("circle")
             .attr("class", "node")
-            .attr("r", function (d) { return d.value })
+            .attr("r", function (d) { return d.value * 3})
             .style("fill", function (d) {
                 if(d.group == "긍정") // 긍정에 대한 색깔
                     return 'rgb(103, 150, 220)';
@@ -175,7 +175,7 @@
             .attr("class", "label")
             .attr("fill", "white")
             .attr("text-anchor", "middle")
-            .attr("font-size", function(d) { return d.value / 2 })
+            .attr("font-size", function(d) { return d.value })
             .text(function (d) { return d.name; });
 
         force.on("tick", function () {
