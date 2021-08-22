@@ -4,38 +4,38 @@
 <!-- ! Main 시작 부분 -->
 <main class="main users chart-page" id="skip-target">
     <div class="container">
+        <a href="{% url 'index:data'%}"><strong style="color:red">분석 바로가기</strong></a>
         <div class="row">
             <div class="col-lg-12">
+                <a href="{% url 'index:ranking_outer'%}"><h2 class="main-title">상의</h2></a>
+                <a href="{% url 'index:ranking_pants'%}"><h2 class="main-title">하의</h2></a>
                 <SELECT onchange="Show_hidden(this.value);">
-                    <option value="1">아우터 선택</option>
-                    <option value="2">원피스 선택</option>
-                    <option value="3">티셔츠 선택</option>
-                    <option value="4">신발 선택</option>
-                    <option value="5">코트 선택</option>
+                    <option value="1">소분류</option>
+                    <option value="2">청바지</option>
+                    <option value="3">슬랙스</option>
                 </SELECT>
 
-                <h2 id="test_1" style="display:block;">아우터 종합 랭킹 TOP 10</h2>
-                <h2 id="test_2" style="display:none;">원피스 종합 랭킹 TOP 10</h2>
-                <h2 id="test_3" style="display:none;">티셔츠 종합 랭킹 TOP 10</h2>
-                <h2 id="test_4" style="display:none;">신발 종합 랭킹 TOP 10</h2>
-                <h2 id="test_5" style="display:none;">코트 종합 랭킹 TOP 10</h2>
+                <h2 id="test_1" style="display:block;">하의 종합 랭킹 TOP 10</h2>
+                <h2 id="test_2" style="display:none;">상의 종합 랭킹 TOP 10</h2>
 
                 <div id="t_1" style="display: block;" class="container">
+                    {% for ranking in ranking_list %}
                     <hr>
                     <div class="row">
+
                         <div class="col-lg-1">
-                            <h2>1</h2>
+                            <h2>{{ forloop.counter }}</h2>
                         </div>
                         <div class="col-lg-3">
-                            <img src="{% static 'assets/1.jpg' %}" width="100%" height="100%"/>
+                            <img src="{{ranking.ranking_img.url}}" width="100%" height="100%"/>
                         </div>
                         <div class="col-lg-2">
-                            <h2>청자켓</h2>
+                            <h2>{{ranking.ranking_name}}</h2>
                             <br><br><br><br><br><br><br><br>
-                            <h2>랭킹 점수 : 92</h2>
+                            <h2>랭킹 점수 : {{ranking.ranking_score}}</h2>
                         </div>
                     </div>
-                    <hr>
+                    {% endfor %}
                 </div>
 
                 <div id="t_2" style="display: none;" class="container">

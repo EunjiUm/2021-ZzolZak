@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- pybo CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'search.css' %}">
+</head>
+<body>
+{% block content %}
+<form id="searchForm" method="get" action="{% url 'index:data' %}">
+    <input type="text" id="kw" name="kw" autocomplete="off" placeholder="옷 종류를 입력하세요."/>
+    <ul class="output" style="display:none;">
+    </ul>
+    <button type="submit" id="submit">Search</button>
+</form>
+{% endblock %}
+<!-- 기본 템플릿 안에 삽입될 내용 End -->
+</body>
+<script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'assets/vendor/search.js' %}"></script>
+</html>
+{% block script %}
+<script type='text/javascript'>
+$(document).ready(function(){
+    $("#submit").on('click', function() {
+        $("#searchForm").val($(".kw").val());
+        $("#searchForm").submit();
+    });
+});
+</script>
+{% endblock %}

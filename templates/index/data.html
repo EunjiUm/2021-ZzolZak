@@ -2,6 +2,14 @@
 {% load static %}
 {% block content %}
 <div class="container">
+    <h1 class="main-title">{{keyword}}에 대한 검색 결과입니다.</h1>
+    <form id="searchForm" method="get" action="{% url 'index:data' %}">
+        <input type="text" id="kw" name="kw" autocomplete="off" placeholder="옷 종류를 입력하세요."/>
+        <ul class="output" style="display:none;">
+        </ul>
+        <button type="submit" id="submit"><strong>검색</strong></button>
+    </form>
+    <a href="{% url 'index:ranking_outer'%}"><strong style="color:red">랭킹 바로가기</strong></a>
     <h2 class="main-title">패션지수</h2>
     <div class="row">
         <div class="col-lg-12">
@@ -19,7 +27,6 @@
         <div class="col-lg-6 d3">
             <!-- d3 그래프 삽입 부분-->
         </div>
-        <h2 style="text-align: center;">긍정:{{positive_value}}%, 부정:{{negative_value}}%, 중립:{{neutral_value}}%</h2>
         <div class="col-lg-6">
             <table>
                 <thead>
@@ -36,7 +43,7 @@
                 <tr class="text-center">
                     <td>{{ sent.id }}위</td>
                     <td class="text-center">
-                        {{ sent.name }}
+                        {{ sent.word }}
                     </td>
                     <td>{{ sent.value}}</td>
                     <td>
@@ -47,10 +54,65 @@
                 {% endif %}
                 </tbody>
             </table>
+            <h2 style="text-align: center;">긍정:{{positive_value}}%, 부정:{{negative_value}}%, 중립:{{neutral_value}}%</h2>
         </div>
     </div>
 </div>
-
+<div class="container">
+    <h2 class="main-title">원문보기</h2>
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="wrapper">
+                <ul class="tabs" style="background-color:brown;">
+                    <li class="active">무신사</li>
+                    <li>서울스토어</li>
+                    <li>SSF</li>
+                </ul>
+                <ul class="tab__content">
+                    <li class="active">
+                        <div class="content__wrapper" >
+                            <!-- 내용 들어가는 부분 -->
+                            <div style="height: 600px; overflow: auto">
+                                {% for review_list in musinsa_review_list %}
+                                <div style="height:100px;">
+                                    <hr>
+                                    <h3>{{ review_list.review }} </h3>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content__wrapper">
+                            <!-- 내용 들어가는 부분 -->
+                            <div style="height: 600px; overflow: auto">
+                                {% for review_list in seoulstore_review_list %}
+                                <div style="height:100px;">
+                                    <hr>
+                                    <h3>{{ review_list.review }} </h3>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content__wrapper">
+                            <!-- 내용 들어가는 부분 -->
+                            <div style="height: 600px; overflow: auto">
+                                {% for review_list in ssf_review_list %}
+                                <div style="height:100px;">
+                                    <hr>
+                                    <h3>{{ review_list.review }} </h3>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block script %}
@@ -189,4 +251,72 @@
         });
 
     </script>
+<script>
+	$(document).ready(function () {
+	// Variables
+	var clickedTab = $(".tabs > .active");
+	var tabWrapper = $(".tab__content");
+	var activeTab = tabWrapper.find(".active");
+	var activeTabHeight = activeTab.outerHeight();
+
+	// Show tab on page load
+	activeTab.show();
+
+	// Set height of wrapper on page load
+	tabWrapper.height(activeTabHeight);
+
+	$(".tabs > li").on("click", function () {
+		// Remove class from active tab
+		$(".tabs > li").removeClass("active");
+
+		// Add class active to clicked tab
+		$(this).addClass("active");
+
+		// Update clickedTab variable
+		clickedTab = $(".tabs .active");
+
+		// fade out active tab
+		activeTab.fadeOut(250, function () {
+			// Remove active class all tabs
+			$(".tab__content > li").removeClass("active");
+
+			// Get index of clicked tab
+			var clickedTabIndex = clickedTab.index();
+
+			// Add class active to corresponding tab
+			$(".tab__content > li").eq(clickedTabIndex).addClass("active");
+
+			// update new active tab
+			activeTab = $(".tab__content > .active");
+
+			// Update variable
+			activeTabHeight = activeTab.outerHeight();
+
+			// Animate height of wrapper to new tab height
+			tabWrapper
+				.stop()
+				.delay(50)
+				.animate(
+					{
+						height: activeTabHeight
+					},
+					500,
+					function () {
+						// Fade in active tab
+						activeTab.delay(50).fadeIn(250);
+					}
+				);
+		});
+	});
+});
+
+</script>
+<script type='text/javascript'>
+$(document).ready(function(){
+    $("#submit").on('click', function() {
+        $("#searchForm").val($(".kw").val());
+        $("#searchForm").submit();
+    });
+});
+</script>
 {% endblock %}
