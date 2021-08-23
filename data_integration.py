@@ -7,18 +7,114 @@ django.setup()
 
 from index.models import *
 
+FashionScore_musinsa_trench_coat = FashionScore_musinsa_trench_coat.objects.values()
+FashionScore_seoulstore_trench_coat = FashionScore_seoulstore_trench_coat.objects.values()
+FashionScore_ssf_trench_coat = FashionScore_ssf_trench_coat.objects.values()
+FashionScore_musinsa_coat = FashionScore_musinsa_coat.objects.values()
+FashionScore_seoulstore_coat = FashionScore_seoulstore_coat.objects.values()
+FashionScore_ssf_coat = FashionScore_ssf_coat.objects.values()
+FashionScore_musinsa_padded_jacket = FashionScore_musinsa_padded_jacket.objects.values()
+FashionScore_seoulstore_padded_jacket = FashionScore_seoulstore_padded_jacket.objects.values()
+FashionScore_ssf_padded_jacket = FashionScore_ssf_padded_jacket.objects.values()
+FashionScore_musinsa_military = FashionScore_musinsa_military.objects.values()
+FashionScore_seoulstore_military = FashionScore_seoulstore_military.objects.values()
+FashionScore_ssf_military = FashionScore_ssf_military.objects.values()
+FashionScore_musinsa_blazer = FashionScore_musinsa_blazer.objects.values()
+FashionScore_seoulstore_blazer = FashionScore_seoulstore_blazer.objects.values()
+FashionScore_ssf_blazer = FashionScore_ssf_blazer.objects.values()
+FashionScore_musinsa_leather_jacket = FashionScore_musinsa_leather_jacket.objects.values()
+FashionScore_seoulstore_leather_jacket = FashionScore_seoulstore_leather_jacket.objects.values()
+FashionScore_ssf_leather_jacket = FashionScore_ssf_leather_jacket.objects.values()
+FashionScore_musinsa_fur_jacket = FashionScore_musinsa_fur_jacket.objects.values()
+FashionScore_seoulstore_fur_jacket = FashionScore_seoulstore_fur_jacket.objects.values()
+FashionScore_ssf_fur_jacket = FashionScore_ssf_fur_jacket.objects.values()
+FashionScore_musinsa_short_sleeve_jacket = FashionScore_musinsa_short_sleeve_jacket.objects.values()
+FashionScore_seoulstore_short_sleeve_jacket = FashionScore_seoulstore_short_sleeve_jacket.objects.values()
+FashionScore_ssf_short_sleeve_jacket = FashionScore_ssf_short_sleeve_jacket.objects.values()
+FashionScore_musinsa_long_sleeve_jacket = FashionScore_musinsa_long_sleeve_jacket.objects.values()
+FashionScore_seoulstore_long_sleeve_jacket = FashionScore_seoulstore_long_sleeve_jacket.objects.values()
+FashionScore_ssf_long_sleeve_jacket = FashionScore_ssf_long_sleeve_jacket.objects.values()
+FashionScore_musinsa_shirt = FashionScore_musinsa_shirt.objects.values()
+FashionScore_seoulstore_shirt = FashionScore_seoulstore_shirt.objects.values()
+FashionScore_ssf_shirt = FashionScore_ssf_shirt.objects.values()
+FashionScore_musinsa_blouse = FashionScore_musinsa_blouse.objects.values()
+FashionScore_seoulstore_blouse = FashionScore_seoulstore_blouse.objects.values()
+FashionScore_ssf_blouse = FashionScore_ssf_blouse.objects.values()
+FashionScore_musinsa_neat = FashionScore_musinsa_neat.objects.values()
+FashionScore_seoulstore_neat = FashionScore_seoulstore_neat.objects.values()
+FashionScore_ssf_neat = FashionScore_ssf_neat.objects.values()
+FashionScore_musinsa_hoodie = FashionScore_musinsa_hoodie.objects.values()
+FashionScore_seoulstore_hoodie = FashionScore_seoulstore_hoodie.objects.values()
+FashionScore_ssf_hoodie = FashionScore_ssf_hoodie.objects.values()
+FashionScore_musinsa_sweat_shirt = FashionScore_musinsa_sweat_shirt.objects.values()
+FashionScore_seoulstore_sweat_shirt = FashionScore_seoulstore_sweat_shirt.objects.values()
+FashionScore_ssf_sweat_shirt = FashionScore_ssf_sweat_shirt.objects.values()
+FashionScore_musinsa_denim_pants = FashionScore_musinsa_denim_pants.objects.values()
+FashionScore_seoulstore_denim_pants = FashionScore_seoulstore_denim_pants.objects.values()
+FashionScore_ssf_denim_pants = FashionScore_ssf_denim_pants.objects.values()
+FashionScore_musinsa_mini_skirt = FashionScore_musinsa_mini_skirt.objects.values()
+FashionScore_seoulstore_mini_skirt = FashionScore_seoulstore_mini_skirt.objects.values()
+FashionScore_ssf_mini_skirt = FashionScore_ssf_mini_skirt.objects.values()
+FashionScore_musinsa_skirt = FashionScore_musinsa_skirt.objects.values()
+FashionScore_seoulstore_skirt = FashionScore_seoulstore_skirt.objects.values()
+FashionScore_ssf_skirt = FashionScore_ssf_skirt.objects.values()
+FashionScore_musinsa_slacks = FashionScore_musinsa_slacks.objects.values()
+FashionScore_seoulstore_slacks = FashionScore_seoulstore_slacks.objects.values()
+FashionScore_ssf_slacks = FashionScore_ssf_slacks.objects.values()
+FashionScore_musinsa_short_pants = FashionScore_musinsa_short_pants.objects.values()
+FashionScore_seoulstore_short_pants = FashionScore_seoulstore_short_pants.objects.values()
+FashionScore_ssf_short_pants = FashionScore_ssf_short_pants.objects.values()
+FashionScore_musinsa_sports_wear = FashionScore_musinsa_sports_wear.objects.values()
+FashionScore_seoulstore_sports_wear = FashionScore_seoulstore_sports_wear.objects.values()
+FashionScore_ssf_sports_wear = FashionScore_ssf_sports_wear.objects.values()
+FashionScore_musinsa_leggings = FashionScore_musinsa_leggings.objects.values()
+FashionScore_seoulstore_leggings = FashionScore_seoulstore_leggings.objects.values()
+FashionScore_ssf_leggings = FashionScore_ssf_leggings.objects.values()
+FashionScore_musinsa_sports_shoes = FashionScore_musinsa_sports_shoes.objects.values()
+FashionScore_seoulstore_sports_shoes = FashionScore_seoulstore_sports_shoes.objects.values()
+FashionScore_ssf_sports_shoes = FashionScore_ssf_sports_shoes.objects.values()
+FashionScore_musinsa_sandal = FashionScore_musinsa_sandal.objects.values()
+FashionScore_seoulstore_sandal = FashionScore_seoulstore_sandal.objects.values()
+FashionScore_ssf_sandal = FashionScore_ssf_sandal.objects.values()
+FashionScore_musinsa_heel = FashionScore_musinsa_heel.objects.values()
+FashionScore_seoulstore_heel = FashionScore_seoulstore_heel.objects.values()
+FashionScore_ssf_heel = FashionScore_ssf_heel.objects.values()
+FashionScore_musinsa_loafers = FashionScore_musinsa_loafers.objects.values()
+FashionScore_seoulstore_loafers = FashionScore_seoulstore_loafers.objects.values()
+FashionScore_ssf_loafers = FashionScore_ssf_loafers.objects.values()
+FashionScore_musinsa_walker = FashionScore_musinsa_walker.objects.values()
+FashionScore_seoulstore_walker = FashionScore_seoulstore_walker.objects.values()
+FashionScore_ssf_walker = FashionScore_ssf_walker.objects.values()
+FashionScore_musinsa_dress = FashionScore_musinsa_dress.objects.values()
+FashionScore_seoulstore_dress = FashionScore_seoulstore_dress.objects.values()
+FashionScore_ssf_dress = FashionScore_ssf_dress.objects.values()
+FashionScore_musinsa_back_pack = FashionScore_musinsa_back_pack.objects.values()
+FashionScore_seoulstore_back_pack = FashionScore_seoulstore_back_pack.objects.values()
+FashionScore_ssf_back_pack = FashionScore_ssf_back_pack.objects.values()
+FashionScore_musinsa_tote_bag = FashionScore_musinsa_tote_bag.objects.values()
+FashionScore_seoulstore_tote_bag = FashionScore_seoulstore_tote_bag.objects.values()
+FashionScore_ssf_tote_bag = FashionScore_ssf_tote_bag.objects.values()
+FashionScore_musinsa_clutch_bag = FashionScore_musinsa_clutch_bag.objects.values()
+FashionScore_seoulstore_clutch_bag = FashionScore_seoulstore_clutch_bag.objects.values()
+FashionScore_ssf_clutch_bag = FashionScore_ssf_clutch_bag.objects.values()
+FashionScore_musinsa_shoulder_bag = FashionScore_musinsa_shoulder_bag.objects.values()
+FashionScore_seoulstore_shoulder_bag = FashionScore_seoulstore_shoulder_bag.objects.values()
+FashionScore_ssf_shoulder_bag = FashionScore_ssf_shoulder_bag.objects.values()
+FashionScore_musinsa_eco_bag = FashionScore_musinsa_eco_bag.objects.values()
+FashionScore_seoulstore_eco_bag = FashionScore_seoulstore_eco_bag.objects.values()
+FashionScore_ssf_eco_bag = FashionScore_ssf_eco_bag.objects.values()
+
 reviewDate = [0] * 12
 category = 0
 year = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-
 
 def save_FashionScore(product):
     if product == "trench_coat":
         product_id = 1
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -44,9 +140,9 @@ def save_FashionScore(product):
     elif product == "coat":
         product_id = 2
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -72,9 +168,9 @@ def save_FashionScore(product):
     elif product == "padded_jacket":
         product_id = 3
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -100,9 +196,9 @@ def save_FashionScore(product):
     elif product == "military":
         product_id = 4
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -128,9 +224,9 @@ def save_FashionScore(product):
     elif product == "blazer":
         product_id = 5
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -156,9 +252,9 @@ def save_FashionScore(product):
     elif product == "leather_jacket":
         product_id = 6
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -184,9 +280,9 @@ def save_FashionScore(product):
     elif product == "fur_jacket":
         product_id = 7
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -212,9 +308,9 @@ def save_FashionScore(product):
     elif product == "short_sleeve_jacket":
         product_id = 8
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -240,9 +336,9 @@ def save_FashionScore(product):
     elif product == "long_sleeve_jacket":
         product_id = 9
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -268,9 +364,9 @@ def save_FashionScore(product):
     elif product == "shirt":
         product_id = 10
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -296,9 +392,9 @@ def save_FashionScore(product):
     elif product == "blouse":
         product_id = 11
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -324,9 +420,9 @@ def save_FashionScore(product):
     elif product == "neat":
         product_id = 12
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -352,9 +448,9 @@ def save_FashionScore(product):
     elif product == "hoodie":
         product_id = 13
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -380,9 +476,9 @@ def save_FashionScore(product):
     elif product == "sweat_shirt":
         product_id = 14
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -408,9 +504,9 @@ def save_FashionScore(product):
     elif product == "denim_pants":
         product_id = 15
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -436,9 +532,9 @@ def save_FashionScore(product):
     elif product == "mini_skirt":
         product_id = 16
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -464,9 +560,9 @@ def save_FashionScore(product):
     elif product == "skirt":
         product_id = 17
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -492,9 +588,9 @@ def save_FashionScore(product):
     elif product == "slacks":
         product_id = 18
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -520,9 +616,9 @@ def save_FashionScore(product):
     elif product == "short_pants":
         product_id = 19
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -548,9 +644,9 @@ def save_FashionScore(product):
     elif product == "sports_wear":
         product_id = 20
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -576,9 +672,9 @@ def save_FashionScore(product):
     elif product == "leggings":
         product_id = 21
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -604,9 +700,9 @@ def save_FashionScore(product):
     elif product == "sports_shoes":
         product_id = 22
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -632,9 +728,9 @@ def save_FashionScore(product):
     elif product == "sandal":
         product_id = 23
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -660,9 +756,9 @@ def save_FashionScore(product):
     elif product == "heel":
         product_id = 24
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -688,9 +784,9 @@ def save_FashionScore(product):
     elif product == "loafers":
         product_id = 25
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -716,9 +812,9 @@ def save_FashionScore(product):
     elif product == "walker":
         product_id = 26
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -744,9 +840,9 @@ def save_FashionScore(product):
     elif product == "dress":
         product_id = 27
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -772,9 +868,9 @@ def save_FashionScore(product):
     elif product == "back_pack":
         product_id = 28
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -800,9 +896,9 @@ def save_FashionScore(product):
     elif product == "tote_bag":
         product_id = 29
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -828,9 +924,9 @@ def save_FashionScore(product):
     elif product == "clutch_bag":
         product_id = 30
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -856,9 +952,9 @@ def save_FashionScore(product):
     elif product == "shoulder_bag":
         product_id = 31
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -884,9 +980,9 @@ def save_FashionScore(product):
     elif product == "eco_bag":
         product_id = 32
         for i in range(len(year)):
-            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_seoulstore_trench_coat[product_id - 1]["\"" + year[i] + "\""] + \
-                            FashionScore_ssf_trench_coat[product_id - 1]["\"" + year[i] + "\""]
+            reviewDate[i] = FashionScore_musinsa_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_seoulstore_trench_coat[product_id - 1][year[i]] + \
+                            FashionScore_ssf_trench_coat[product_id - 1][year[i]]
 
         copied_list = sorted(reviewDate, reverse=True)
         month_1 = reviewDate.index(copied_list[0]) + 1
@@ -917,7 +1013,7 @@ def save_Ranking(product):
         Ranking(
             ranking_name="트렌치코트",
             ranking_img=product + ".jpg",
-            ranking_score=FashionScore_musinsa_trench_coat[product_id - 1]['ranking_score`'] +
+            ranking_score=FashionScore_musinsa_trench_coat[product_id - 1]['ranking_score'] +
                           FashionScore_seoulstore_trench_coat[product_id - 1][
                               'ranking_score'] + FashionScore_ssf_trench_coat[product_id - 1]['ranking_score']
         ).save()
@@ -943,7 +1039,7 @@ def save_Ranking(product):
         product_id = 4
         Ranking(
             ranking_name="밀리터리",
-            ranking_img=product + ".jpg",
+            ranking_img=product + ".jpeg",
             ranking_score=FashionScore_musinsa_military[product_id - 1]['ranking_score'] +
                           FashionScore_seoulstore_military[product_id - 1][
                               'ranking_score'] + FashionScore_ssf_military[product_id - 1]['ranking_score']
