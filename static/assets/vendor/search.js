@@ -1,6 +1,5 @@
 $(document).ready(function(){
   var $terms = [
-
 '트렌치코트',
 '코트',
 '패딩',
@@ -22,7 +21,7 @@ $(document).ready(function(){
 '숏팬츠',
 '트레이닝',
 '레깅스',
-'운동화,'
+'운동화',
 '샌들',
 '힐',
 '로퍼',
@@ -32,7 +31,7 @@ $(document).ready(function(){
 '토트백',
 '클러치',
 '숄더백',
-'에코백',
+'에코백'
      ].sort(),
      $return = [];
   function strInArray(str, strArray) {

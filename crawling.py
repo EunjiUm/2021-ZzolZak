@@ -427,12 +427,1909 @@ if company == "musinsa":
             Review_musinsa_trench_coat(
                 review=reviews[i]
             ).save()
-    elif product == "":
-        pass
+    elif product == "coat":
+        FashionScore_musinsa_coat(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_coat(
+                review=reviews[i]
+            ).save()
+    elif product == "padded_jacket":
+        FashionScore_musinsa_padded_jacket(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_padded_jacket(
+                review=reviews[i]
+            ).save()
+    elif product == "military":
+        FashionScore_musinsa_military(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_military(
+                review=reviews[i]
+            ).save()
+    elif product == "blazer":
+        FashionScore_musinsa_blazer(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_blazer(
+                review=reviews[i]
+            ).save()
+    elif product == "leather_jacket":
+        FashionScore_musinsa_leather_jacket(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_leather_jacket(
+                review=reviews[i]
+            ).save()
+    elif product == "fur_jacket":
+        FashionScore_musinsa_fur_jacket(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_fur_jacket(
+                review=reviews[i]
+            ).save()
+    elif product == "short_sleeve_jacket":
+        FashionScore_musinsa_short_sleeve_jacket(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_short_sleeve_jacket(
+                review=reviews[i]
+            ).save()
+    elif product == "long_sleeve_jacket":
+        FashionScore_musinsa_long_sleeve_jacket(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_long_sleeve_jacket(
+                review=reviews[i]
+            ).save()
+    elif product == "shirt":
+        FashionScore_musinsa_shirt(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_shirt(
+                review=reviews[i]
+            ).save()
+    elif product == "blouse":
+        FashionScore_musinsa_blouse(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_blouse(
+                review=reviews[i]
+            ).save()
+    elif product == "neat":
+        FashionScore_musinsa_neat(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_neat(
+                review=reviews[i]
+            ).save()
+    elif product == "hoodie":
+        FashionScore_musinsa_hoodie(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_hoodie(
+                review=reviews[i]
+            ).save()
+    elif product == "sweat_shirt":
+        FashionScore_musinsa_sweat_shirt(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_sweat_shirt(
+                review=reviews[i]
+            ).save()
+    elif product == "denim_pants":
+        FashionScore_musinsa_denim_pants(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_denim_pants(
+                review=reviews[i]
+            ).save()
+    elif product == "mini_skirt":
+        FashionScore_musinsa_mini_skirt(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_mini_skirt(
+                review=reviews[i]
+            ).save()
+    elif product == "skirt":
+        FashionScore_musinsa_skirt(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_skirt(
+                review=reviews[i]
+            ).save()
+    elif product == "slacks":
+        FashionScore_musinsa_slacks(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_slacks(
+                review=reviews[i]
+            ).save()
+    elif product == "short_pants":
+        FashionScore_musinsa_short_pants(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_short_pants(
+                review=reviews[i]
+            ).save()
+    elif product == "sports_wear":
+        FashionScore_musinsa_sports_wear(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_sports_wear(
+                review=reviews[i]
+            ).save()
+    elif product == "leggings":
+        FashionScore_musinsa_leggings(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_leggings(
+                review=reviews[i]
+            ).save()
+    elif product == "sports_shoes":
+        FashionScore_musinsa_sports_shoes(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_sports_shoes(
+                review=reviews[i]
+            ).save()
+    elif product == "sandal":
+        FashionScore_musinsa_sandal(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_sandal(
+                review=reviews[i]
+            ).save()
+    elif product == "heel":
+        FashionScore_musinsa_heel(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_heel(
+                review=reviews[i]
+            ).save()
+    elif product == "loafers":
+        FashionScore_musinsa_loafers(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_loafers(
+                review=reviews[i]
+            ).save()
+    elif product == "walker":
+        FashionScore_musinsa_walker(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_walker(
+                review=reviews[i]
+            ).save()
+    elif product == "dress":
+        FashionScore_musinsa_dress(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_dress(
+                review=reviews[i]
+            ).save()
+    elif product == "back_pack":
+        FashionScore_musinsa_back_pack(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_back_pack(
+                review=reviews[i]
+            ).save()
+    elif product == "tote_bag":
+        FashionScore_musinsa_tote_bag(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_tote_bag(
+                review=reviews[i]
+            ).save()
+    elif product == "clutch_bag":
+        FashionScore_musinsa_clutch_bag(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_clutch_bag(
+                review=reviews[i]
+            ).save()
+    elif product == "shoulder_bag":
+        FashionScore_musinsa_shoulder_bag(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_shoulder_bag(
+                review=reviews[i]
+            ).save()
+    elif product == "eco_bag":
+        FashionScore_musinsa_eco_bag(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_musinsa_eco_bag(
+                review=reviews[i]
+            ).save()
 
 elif company == "seoulstore":
-    pass
+    if product == "trench_coat":
+        FashionScore_seoulstore_trench_coat(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_trench_coat(
+                review=reviews[i]
+            ).save()
+    elif product == "coat":
+        FashionScore_seoulstore_coat(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_coat(
+                review=reviews[i]
+            ).save()
+    elif product == "padded_jacket":
+        FashionScore_seoulstore_padded_jacket(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_padded_jacket(
+                review=reviews[i]
+            ).save()
+    elif product == "military":
+        FashionScore_seoulstore_military(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_military(
+                review=reviews[i]
+            ).save()
+    elif product == "blazer":
+        FashionScore_seoulstore_blazer(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_blazer(
+                review=reviews[i]
+            ).save()
+    elif product == "leather_jacket":
+        FashionScore_seoulstore_leather_jacket(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_leather_jacket(
+                review=reviews[i]
+            ).save()
+    elif product == "fur_jacket":
+        FashionScore_seoulstore_fur_jacket(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_fur_jacket(
+                review=reviews[i]
+            ).save()
+    elif product == "short_sleeve_jacket":
+        FashionScore_seoulstore_short_sleeve_jacket(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_short_sleeve_jacket(
+                review=reviews[i]
+            ).save()
+    elif product == "long_sleeve_jacket":
+        FashionScore_seoulstore_long_sleeve_jacket(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_long_sleeve_jacket(
+                review=reviews[i]
+            ).save()
+    elif product == "shirt":
+        FashionScore_seoulstore_shirt(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_shirt(
+                review=reviews[i]
+            ).save()
+    elif product == "blouse":
+        FashionScore_seoulstore_blouse(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_blouse(
+                review=reviews[i]
+            ).save()
+    elif product == "neat":
+        FashionScore_seoulstore_neat(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_neat(
+                review=reviews[i]
+            ).save()
+    elif product == "hoodie":
+        FashionScore_seoulstore_hoodie(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_hoodie(
+                review=reviews[i]
+            ).save()
+    elif product == "sweat_shirt":
+        FashionScore_seoulstore_sweat_shirt(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_sweat_shirt(
+                review=reviews[i]
+            ).save()
+    elif product == "denim_pants":
+        FashionScore_seoulstore_denim_pants(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_denim_pants(
+                review=reviews[i]
+            ).save()
+    elif product == "mini_skirt":
+        FashionScore_seoulstore_mini_skirt(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_mini_skirt(
+                review=reviews[i]
+            ).save()
+    elif product == "skirt":
+        FashionScore_seoulstore_skirt(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_skirt(
+                review=reviews[i]
+            ).save()
+    elif product == "slacks":
+        FashionScore_seoulstore_slacks(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_slacks(
+                review=reviews[i]
+            ).save()
+    elif product == "short_pants":
+        FashionScore_seoulstore_short_pants(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_short_pants(
+                review=reviews[i]
+            ).save()
+    elif product == "sports_wear":
+        FashionScore_seoulstore_sports_wear(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_sports_wear(
+                review=reviews[i]
+            ).save()
+    elif product == "leggings":
+        FashionScore_seoulstore_leggings(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_leggings(
+                review=reviews[i]
+            ).save()
+    elif product == "sports_shoes":
+        FashionScore_seoulstore_sports_shoes(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_sports_shoes(
+                review=reviews[i]
+            ).save()
+    elif product == "sandal":
+        FashionScore_seoulstore_sandal(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_sandal(
+                review=reviews[i]
+            ).save()
+    elif product == "heel":
+        FashionScore_seoulstore_heel(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_heel(
+                review=reviews[i]
+            ).save()
+    elif product == "loafers":
+        FashionScore_seoulstore_loafers(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_loafers(
+                review=reviews[i]
+            ).save()
+    elif product == "walker":
+        FashionScore_seoulstore_walker(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_walker(
+                review=reviews[i]
+            ).save()
+    elif product == "dress":
+        FashionScore_seoulstore_dress(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_dress(
+                review=reviews[i]
+            ).save()
+    elif product == "back_pack":
+        FashionScore_seoulstore_back_pack(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_back_pack(
+                review=reviews[i]
+            ).save()
+    elif product == "tote_bag":
+        FashionScore_seoulstore_tote_bag(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_tote_bag(
+                review=reviews[i]
+            ).save()
+    elif product == "clutch_bag":
+        FashionScore_seoulstore_clutch_bag(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_clutch_bag(
+                review=reviews[i]
+            ).save()
+    elif product == "shoulder_bag":
+        FashionScore_seoulstore_shoulder_bag(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_shoulder_bag(
+                review=reviews[i]
+            ).save()
+    elif product == "eco_bag":
+        FashionScore_seoulstore_eco_bag(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_seoulstore_eco_bag(
+                review=reviews[i]
+            ).save()
+
 elif company == "ssf":
-    pass
+    if product == "trench_coat":
+        FashionScore_ssf_trench_coat(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_trench_coat(
+                review=reviews[i]
+            ).save()
+    elif product == "coat":
+        FashionScore_ssf_coat(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_coat(
+                review=reviews[i]
+            ).save()
+    elif product == "padded_jacket":
+        FashionScore_ssf_padded_jacket(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_padded_jacket(
+                review=reviews[i]
+            ).save()
+    elif product == "military":
+        FashionScore_ssf_military(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_military(
+                review=reviews[i]
+            ).save()
+    elif product == "blazer":
+        FashionScore_ssf_blazer(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_blazer(
+                review=reviews[i]
+            ).save()
+    elif product == "leather_jacket":
+        FashionScore_ssf_leather_jacket(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_leather_jacket(
+                review=reviews[i]
+            ).save()
+    elif product == "fur_jacket":
+        FashionScore_ssf_fur_jacket(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_fur_jacket(
+                review=reviews[i]
+            ).save()
+    elif product == "short_sleeve_jacket":
+        FashionScore_ssf_short_sleeve_jacket(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_short_sleeve_jacket(
+                review=reviews[i]
+            ).save()
+    elif product == "long_sleeve_jacket":
+        FashionScore_ssf_long_sleeve_jacket(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_long_sleeve_jacket(
+                review=reviews[i]
+            ).save()
+    elif product == "shirt":
+        FashionScore_ssf_shirt(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_shirt(
+                review=reviews[i]
+            ).save()
+    elif product == "blouse":
+        FashionScore_ssf_blouse(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_blouse(
+                review=reviews[i]
+            ).save()
+    elif product == "neat":
+        FashionScore_ssf_neat(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_neat(
+                review=reviews[i]
+            ).save()
+    elif product == "hoodie":
+        FashionScore_ssf_hoodie(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_hoodie(
+                review=reviews[i]
+            ).save()
+    elif product == "sweat_shirt":
+        FashionScore_ssf_sweat_shirt(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_sweat_shirt(
+                review=reviews[i]
+            ).save()
+    elif product == "denim_pants":
+        FashionScore_ssf_denim_pants(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_denim_pants(
+                review=reviews[i]
+            ).save()
+    elif product == "mini_skirt":
+        FashionScore_ssf_mini_skirt(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_mini_skirt(
+                review=reviews[i]
+            ).save()
+    elif product == "skirt":
+        FashionScore_ssf_skirt(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_skirt(
+                review=reviews[i]
+            ).save()
+    elif product == "slacks":
+        FashionScore_ssf_slacks(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_slacks(
+                review=reviews[i]
+            ).save()
+    elif product == "short_pants":
+        FashionScore_ssf_short_pants(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_short_pants(
+                review=reviews[i]
+            ).save()
+    elif product == "sports_wear":
+        FashionScore_ssf_sports_wear(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_sports_wear(
+                review=reviews[i]
+            ).save()
+    elif product == "leggings":
+        FashionScore_ssf_leggings(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_leggings(
+                review=reviews[i]
+            ).save()
+    elif product == "sports_shoes":
+        FashionScore_ssf_sports_shoes(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_sports_shoes(
+                review=reviews[i]
+            ).save()
+    elif product == "sandal":
+        FashionScore_ssf_sandal(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_sandal(
+                review=reviews[i]
+            ).save()
+    elif product == "heel":
+        FashionScore_ssf_heel(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_heel(
+                review=reviews[i]
+            ).save()
+    elif product == "loafers":
+        FashionScore_ssf_loafers(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_loafers(
+                review=reviews[i]
+            ).save()
+    elif product == "walker":
+        FashionScore_ssf_walker(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_walker(
+                review=reviews[i]
+            ).save()
+    elif product == "dress":
+        FashionScore_ssf_dress(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_dress(
+                review=reviews[i]
+            ).save()
+    elif product == "back_pack":
+        FashionScore_ssf_back_pack(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_back_pack(
+                review=reviews[i]
+            ).save()
+    elif product == "tote_bag":
+        FashionScore_ssf_tote_bag(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_tote_bag(
+                review=reviews[i]
+            ).save()
+    elif product == "clutch_bag":
+        FashionScore_ssf_clutch_bag(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_clutch_bag(
+                review=reviews[i]
+            ).save()
+    elif product == "shoulder_bag":
+        FashionScore_ssf_shoulder_bag(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_shoulder_bag(
+                review=reviews[i]
+            ).save()
+    elif product == "eco_bag":
+        FashionScore_ssf_eco_bag(
+            Jan=origin_list[0],
+            Feb=origin_list[1],
+            Mar=origin_list[2],
+            Apr=origin_list[3],
+            May=origin_list[4],
+            June=origin_list[5],
+            July=origin_list[6],
+            Aug=origin_list[7],
+            Sep=origin_list[8],
+            Oct=origin_list[9],
+            Nov=origin_list[10],
+            Dec=origin_list[11],
+            ranking_score=like // len(goods_links) * season_score
+        ).save()
+        for i in range(len(reviews)):
+            Review_ssf_eco_bag(
+                review=reviews[i]
+            ).save()
 
 print("크롤링 데이터 저장 종료")
