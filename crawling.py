@@ -10,8 +10,52 @@ from datetime import datetime
 from time import sleep
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from index.models import FashionScore_musinsa, FashionScore_seoulstore, FashionScore_ssf, \
-    Review_musinsa_shirt, Review_seoulstore_shirt, Review_ssf_shirt
+from index.models import *
+
+def code_matching(company, product):
+    if company == "musinsa":
+        if product == "trench_coat":
+            goods_code = "002008"
+        elif product == "coat":
+            print("겨울싱글코트 : 1 입력, 겨울더블코트 : 2 입력, 겨울기타코트 : 3 입력")
+            detail = int(input())
+            if detail == 1:
+                goods_code="002007"
+            elif detail == 2:
+                goods_code="002024"
+            else:
+                goods_code="002009"
+
+        return goods_code
+    elif company == "seoulstore":
+        if product == "trench_coat":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1165"
+            else:
+                goods_code = "1066"
+
+            goods_code = ""
+        elif product == "":
+            pass
+        return goods_code
+
+    elif company == "ssf":
+        if product == "trench_coat":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "SFMA42A05A02A02"
+                ssf_goods_code="Trench-Coats"
+            else:
+                goods_code = "SFMA41A07A02A02"
+                ssf_goods_code="Trench-Coats"
+
+        elif product == "":
+            pass
+        return goods_code, ssf_goods_code
+
 
 def musinsa_crawling(goods_code, goods_links, review_list, origin_list, like):
     url = 'https://search.musinsa.com/category/' + goods_code
@@ -247,8 +291,7 @@ def ssf_crawling(goods_code, ssf_goods_code, review_list, origin_list, like):
         review_count = []
         one_page_max = 60
         if int(i) == total_page:  # 마지막 페이지에서
-            one_page_max = int(
-                (soup.find("small", {'id': "godTotalCount"}).text).replace("(", "").replace(")", "").replace(",", "")) % 60
+            one_page_max = total_num % 60
         for j in range(1, one_page_max + 1):
             if driver.find_element_by_xpath("//*[@id=\"dspGood\"]/li[" + str(j) + "]/a/div[2]/span[4]/span/em").text == '':
                 continue
@@ -313,34 +356,20 @@ def ssf_crawling(goods_code, ssf_goods_code, review_list, origin_list, like):
 print("크롤링할 사이트와 옷의 이름을 영어로 입력해주세요 (예시) musinsa shirt")
 company, product = map(str, input().split())
 
-if company == "musinsa":
-    if product == "shirt":
-        goods_code = "001001"
-    elif product == "":
-        pass
-elif company == "seoulstore":
-    if product == "shirt":
-        goods_code = ""
-    elif product == "":
-        pass
-elif company == "ssf":
-    if product == "shirt":
-        ssf_goods_code = ""
-        goods_code = ""
-    elif product == "":
-        pass
-
 goods_links = []  # 개별 상품의 url 주소를 저장하는 배열
 review_list = []
 origin_list = [0] * 12
 like = 0  # 좋아요 개수
 
 if company == "musinsa":
+    goods_code = code_matching(company,product)
     musinsa_crawling(goods_code, goods_links, review_list, origin_list, like)
 elif company == "seoulstore":
+    goods_code = code_matching(company,product)
     seoulstore_crawling(goods_code, goods_links, review_list, origin_list, like)
 else:
-    ssf_crawling(goods_code, ssf_goods_code, goods_links, review_list, origin_list, like)
+    goods_code, ssf_goods_code = code_matching(company,product)
+    ssf_crawling(goods_code, ssf_goods_code, review_list, origin_list, like)
 
 print("리뷰 크롤링 완료")
 print("크롤링 데이터 저장 시작")
@@ -348,9 +377,9 @@ print("크롤링 데이터 저장 시작")
 review_list = set(review_list)
 review_list = list(review_list)
 # 해당 사이트의 옷 리뷰 txt 파일 열기
-f = open("data/" + company + "_" + product + ".txt", 'w', encoding='utf-8')  # .txt 파일은 미리 생성해놔야 함
+f = open("data/" + company + "_" + product + ".txt", 'a+', encoding='utf-8')  # .txt 파일은 미리 생성해놔야 함
 for review in review_list:
-    f.write(review + '\n')  # # 해당 사이트의 옷 리뷰 txt 파일 쓰기
+    f.write(review + '\n')  # 해당 사이트의 옷 리뷰 txt 파일 쓰기
 lines = f.readlines()
 reviews = []
 for line in lines:
@@ -378,8 +407,8 @@ season_score = -(abs(month_list.index(month_1) - month_list.index(datetime.today
 
 # 각종 데이터 DB에 저장
 if company == "musinsa":
-    if product == "shirt":
-        FashionScore_musinsa(
+    if product == "trench_coat":
+        FashionScore_musinsa_trench_coat(
             Jan=origin_list[0],
             Feb=origin_list[1],
             Mar=origin_list[2],
@@ -392,10 +421,10 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=(like // len(goods_links)) * season_score
+            ranking_score=like // len(goods_links) * season_score
         ).save()
         for i in range(len(reviews)):
-            Review_musinsa_shirt(
+            Review_musinsa_trench_coat(
                 review=reviews[i]
             ).save()
     elif product == "":

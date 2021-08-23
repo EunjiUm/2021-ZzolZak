@@ -4,7 +4,7 @@ import django
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", 'config.settings')
 django.setup()
-from index.models import SentValue_shirt, SentScore_shirt
+from index.models import *
 import re
 from collections import Counter
 from konlpy.tag import Okt
@@ -17,16 +17,6 @@ def Data_Nlp(product):
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:\\trendanalyzer-314714-b95748a6864c.json"
     top_word_count = 10
     # 파일 리스트
-    filenames = ["data/" + "musinsa_" + product + ".txt", "data/" + "seoulstore_" + product + ".txt", "data/" + "ssf_" + product + ".txt"]
-
-    merge_file = open("data/" + product + ".txt", 'w', encoding='utf-8')
-    for filename in filenames:
-        file = open(filename, 'r', encoding='utf-8')
-        for line in file:
-            merge_file.write(line)
-        file.close()
-    merge_file.close()
-
     filepath = "data/" + product + ".txt"
 
     file = open(filepath, 'r', encoding='utf-8')
@@ -64,12 +54,6 @@ def Data_Nlp(product):
     positive_value = int(positive_value / total_value * 100)
     negative_value = int(negative_value / total_value * 100)
     neutral_value = int(neutral_value / total_value * 100)
-
-    SentValue_shirt(
-        positive_value=positive_value,
-        negative_value=negative_value,
-        neutral_value=neutral_value,
-    ).save()
 
     # 형용사만 추출하여 감정분석
     file = open(filepath, 'r', encoding='utf-8')
@@ -115,19 +99,29 @@ def Data_Nlp(product):
         else:  # 부정일 때
             group_list[i] = "부정"
 
-    nodes = []
-    for i in range(top_word_count):
-        node = dict()
-        node["word"] = word_list[i]
-        node["value"] = frequency_list[i]
-        node["group"] = group_list[i]
-        nodes.append(node)
-
-        SentScore_shirt(
-            word=nodes[i]["word"],
-            value=nodes[i]["value"],
-            group=nodes[i]["group"],
+    if product == "trench_coat":
+        SentValue_trench_coat(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
         ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_trench_coat(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "":
+        pass
+
+
     print("NLP 종료")
 
 print("분석할 옷의 이름을 영어로 입력해주세요 (예시) shirt")
