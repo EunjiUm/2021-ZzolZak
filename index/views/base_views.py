@@ -1646,7 +1646,7 @@ def intro(request):
 
 def ranking(request):
     ranking_num = 10
-    ranking_list = Ranking.objects.all().order_by('-ranking_score')[:ranking_num]
+    ranking_list = Ranking.objects.all().order_by('-ranking_score')[:ranking_num] # ranking_num에 따라서 출력되는 랭킹의 개수가 변경된다.
     context = {'ranking_list': ranking_list}
 
     return render(request, 'index/ranking.html', context)

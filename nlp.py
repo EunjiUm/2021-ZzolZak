@@ -118,11 +118,598 @@ def Data_Nlp(product):
                 value=nodes[i]["value"],
                 group=nodes[i]["group"],
             ).save()
-    elif product == "":
-        pass
+    elif product == "coat":
+        SentValue_coat(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
 
+            SentScore_coat(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "padded_jacket":
+        SentValue_padded_jacket(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_padded_jacket(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "military":
+        SentValue_military(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_military(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "blazer":
+        SentValue_blazer(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_blazer(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "leather_jacket":
+        SentValue_leather_jacket(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_leather_jacket(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "fur_jacket":
+        SentValue_fur_jacket(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_fur_jacket(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "short_sleeve_jacket":
+        SentValue_short_sleeve_jacket(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_short_sleeve_jacket(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "long_sleeve_jacket":
+        SentValue_long_sleeve_jacket(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_long_sleeve_jacket(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "shirt":
+        SentValue_shirt(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_shirt(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "blouse":
+        SentValue_blouse(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_blouse(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "neat":
+        SentValue_neat(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_neat(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "hoodie":
+        SentValue_hoodie(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_hoodie(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "sweat_shirt":
+        SentValue_sweat_shirt(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_sweat_shirt(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "denim_pants":
+        SentValue_denim_pants(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_denim_pants(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "mini_skirt":
+        SentValue_mini_skirt(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_mini_skirt(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "skirt":
+        SentValue_skirt(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_skirt(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "slacks":
+        SentValue_slacks(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_slacks(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "short_pants":
+        SentValue_short_pants(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_short_pants(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "sports_wear":
+        SentValue_sports_wear(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_sports_wear(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "leggings":
+        SentValue_leggings(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_leggings(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "sports_shoes":
+        SentValue_sports_shoes(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_sports_shoes(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "sandal":
+        SentValue_sandal(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_sandal(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "heel":
+        SentValue_heel(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_heel(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "loafers":
+        SentValue_loafers(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_loafers(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "walker":
+        SentValue_walker(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_walker(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "dress":
+        SentValue_dress(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_dress(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "back_pack":
+        SentValue_back_pack(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_back_pack(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "tote_bag":
+        SentValue_tote_bag(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_tote_bag(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "clutch_bag":
+        SentValue_clutch_bag(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_clutch_bag(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "shoulder_bag":
+        SentValue_shoulder_bag(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_shoulder_bag(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
+    elif product == "eco_bag":
+        SentValue_eco_bag(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_eco_bag(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
 
     print("NLP 종료")
+
 
 print("분석할 옷의 이름을 영어로 입력해주세요 (예시) shirt")
 product = input()
