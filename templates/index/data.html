@@ -7,37 +7,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 </head>
-<body>
 <!--상단 nav-->
-<nav class="navbar navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <a href="{% url 'index:search'%}">꿀트렌드</a>
-        </div>
-        <div class="nav_menu">
-            <a href="{% url 'index:ranking'%}">랭킹</a>
-        </div>
-        <!--검색창-->
-        <form id="searchForm" method="get" action="{% url 'index:data' %}">
-            <input type="text" id="kw" name="kw" autocomplete="off" placeholder="옷 종류를 입력하세요." />
-            <ul class="output" style="display:none;">
-            </ul>
-            <button  type="submit" id="submit" style="background-color:transparent;"><i class="fa fa-search" style="color : white;"></i>
-            </button>
-        </form>
-    </div>
-</nav>
 <div class="result-navbar">
     <div class="result-container">
-    <h2 class="header">{{keyword}}에 대한 검색 결과입니다.</h2>
-        </div>
+        <h2 class="header">{{keyword}}에 대한 검색 결과입니다.</h2>
+    </div>
 </div>
 
 <div class="container">
-
     <!--패션지수-->
     <h2 class="main-title">패션지수</h2>
-
     <!--입기 좋은 달 추천-->
     <div class="month_data">
         <div class="month_box"><span class="iconWrapper"><i class="far fa-calendar-alt fa-lg"></i></span>{{month_1}}월</div>
@@ -52,13 +31,12 @@
                 <canvas id="FashionChart" height="100vh" aria-label="Site statistics" role="img"></canvas>
             </div>
         </div>
-
     </div>
 </div>
 
 <div class="container">
     <h2 class="main-title">감성어 분석</h2>
-        <div class="container">
+    <div class="container">
         <div class="col-xl-8 col-lg-12 d3 d3_graph">
             <!-- d3 그래프 삽입 부분-->
         </div>
@@ -92,12 +70,11 @@
                 {% endif %}
                 </tbody>
             </table>
-
         </div>
     </div>
 </div>
-
 <!--원분보기-->
+
 <div class="container">
     <h2 class="main-title">원문보기</h2>
     <div class="row">
@@ -112,7 +89,7 @@
                     <li class="active">
                         <div class="content__wrapper">
                             <!-- 내용 들어가는 부분 -->
-                            <div style="height: 600px; overflow: auto">
+                            <div style="height: 300px; overflow: auto">
                                 {% for review_list in musinsa_review_list %}
                                 <div style="height:100px;">
                                     <hr>
@@ -125,7 +102,7 @@
                     <li>
                         <div class="content__wrapper">
                             <!-- 내용 들어가는 부분 -->
-                            <div style="height: 600px; overflow: auto">
+                            <div style="height: 300px; overflow: auto">
                                 {% for review_list in seoulstore_review_list %}
                                 <div style="height:100px;">
                                     <hr>
@@ -138,7 +115,7 @@
                     <li>
                         <div class="content__wrapper">
                             <!-- 내용 들어가는 부분 -->
-                            <div style="height: 600px; overflow: auto">
+                            <div style="height: 300px; overflow: auto">
                                 {% for review_list in ssf_review_list %}
                                 <div style="height:100px;">
                                     <hr>
@@ -153,7 +130,6 @@
         </div>
     </div>
 </div>
-</body>
 
 {% endblock %}
 
