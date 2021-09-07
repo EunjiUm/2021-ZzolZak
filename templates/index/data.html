@@ -1,34 +1,72 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<head>
+    <!-- pybo CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'data.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+</head>
+<body>
+<!--상단 nav-->
+<nav class="navbar navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="{% url 'index:search'%}">꿀트렌드</a>
+        </div>
+        <div class="nav_menu">
+            <a href="{% url 'index:ranking'%}">랭킹</a>
+        </div>
+        <!--검색창-->
+        <form id="searchForm" method="get" action="{% url 'index:data' %}">
+            <input type="text" id="kw" name="kw" autocomplete="off" placeholder="옷 종류를 입력하세요." />
+            <ul class="output" style="display:none;">
+            </ul>
+            <button  type="submit" id="submit" style="background-color:transparent;"><i class="fa fa-search" style="color : white;"></i>
+            </button>
+        </form>
+    </div>
+</nav>
+<div class="result-navbar">
+    <div class="result-container">
+    <h2 class="header">{{keyword}}에 대한 검색 결과입니다.</h2>
+        </div>
+</div>
+
 <div class="container">
-    <h1 class="main-title">{{keyword}}에 대한 검색 결과입니다.</h1>
-    <form id="searchForm" method="get" action="{% url 'index:data' %}">
-        <input type="text" id="kw" name="kw" autocomplete="off" placeholder="옷 종류를 입력하세요."/>
-        <ul class="output" style="display:none;">
-        </ul>
-        <button type="submit" id="submit"><strong>검색</strong></button>
-    </form>
-    <a href="{% url 'index:ranking'%}"><strong style="color:red">랭킹 바로가기</strong></a>
+
+    <!--패션지수-->
     <h2 class="main-title">패션지수</h2>
+
+    <!--입기 좋은 달 추천-->
+    <div class="month_data">
+        <div class="month_box"><span class="iconWrapper"><i class="far fa-calendar-alt fa-lg"></i></span>{{month_1}}월</div>
+        <div class="month_box"><span class="iconWrapper"><i class="far fa-calendar-alt fa-lg"></i></span>{{month_2}}월</div>
+        <div class="month_box"><span class="iconWrapper"><i class="far fa-calendar-alt fa-lg"></i></span>{{month_3}}월</div>
+    </div>
+
+    <!--패션지수 그래프-->
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-md-10 month_graph">
             <div class="chart">
                 <canvas id="FashionChart" height="100vh" aria-label="Site statistics" role="img"></canvas>
             </div>
-            <div class="chart-detail">
-                <h2 style="text-align: center;">{{month_1}}월, {{month_2}}월, {{month_3}}월에 입기 좋아요</h2>
-            </div>
         </div>
+
     </div>
 </div>
+
 <div class="container">
-    <div class="row">
-        <div class="col-lg-6 d3">
+    <h2 class="main-title">감성어 분석</h2>
+        <div class="container">
+        <div class="col-xl-8 col-lg-12 d3 d3_graph">
             <!-- d3 그래프 삽입 부분-->
         </div>
-        <div class="col-lg-6">
-            <table>
+    </div>
+    <h2 style="text-align: center;">긍정:{{positive_value}}%, 부정:{{negative_value}}%, 중립:{{neutral_value}}%</h2>
+    <div class="col-xl-4 col-lg-12 d3_data">
+        <div class="d3_box">
+            <table border="1">
                 <thead>
                 <tr>
                     <th>랭킹</th>
@@ -54,23 +92,25 @@
                 {% endif %}
                 </tbody>
             </table>
-            <h2 style="text-align: center;">긍정:{{positive_value}}%, 부정:{{negative_value}}%, 중립:{{neutral_value}}%</h2>
+
         </div>
     </div>
 </div>
+
+<!--원분보기-->
 <div class="container">
     <h2 class="main-title">원문보기</h2>
     <div class="row">
         <div class="col-lg-12">
             <section class="wrapper">
-                <ul class="tabs" style="background-color:brown;">
+                <ul class="tabs" style="background-color:#6796dc;">
                     <li class="active">무신사</li>
                     <li>서울스토어</li>
                     <li>SSF</li>
                 </ul>
                 <ul class="tab__content">
                     <li class="active">
-                        <div class="content__wrapper" >
+                        <div class="content__wrapper">
                             <!-- 내용 들어가는 부분 -->
                             <div style="height: 600px; overflow: auto">
                                 {% for review_list in musinsa_review_list %}
@@ -113,6 +153,8 @@
         </div>
     </div>
 </div>
+</body>
+
 {% endblock %}
 
 {% block script %}
@@ -186,7 +228,11 @@
         },
       }
     });
-  </script>
+
+
+</script>
+
+<!--d3 그래프-->
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
         var graph = {
@@ -200,7 +246,7 @@
             ],
         };
         var width = 1280,
-            height = 960;
+            height = 500;
 
         var force = d3.layout.force()
             .charge(-1200)
@@ -218,7 +264,7 @@
             .data(graph.nodes)
             .enter().append("circle")
             .attr("class", "node")
-            .attr("r", function (d) { return d.value * 3})
+            .attr("r", function (d) { return d.value * 2})
             .style("fill", function (d) {
                 if(d.group == "긍정") // 긍정에 대한 색깔
                     return 'rgb(103, 150, 220)';
@@ -248,7 +294,15 @@
             });
         });
 
-    </script>
+
+
+
+
+
+
+
+</script>
+
 <script>
 	$(document).ready(function () {
 	// Variables
@@ -308,7 +362,9 @@
 	});
 });
 
+
 </script>
+
 <script type='text/javascript'>
 $(document).ready(function(){
     $("#submit").on('click', function() {
@@ -316,5 +372,15 @@ $(document).ready(function(){
         $("#searchForm").submit();
     });
 });
+
+
+
+
+
+
+
+
 </script>
+
 {% endblock %}
+

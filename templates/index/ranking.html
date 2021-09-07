@@ -1,10 +1,39 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<head>
+    <!-- pybo CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'ranking.css' %}">
+    <link href="//db.onlinewebfonts.com/c/162bea5982a433fdc612cb3a93d902f9?family=Godo+B" rel="stylesheet"
+          type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
 <!-- ! Main 시작 부분 -->
+<body>
+<!--상단 nav-->
+<nav class="navbar navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="{% url 'index:search'%}">꿀트렌드</a>
+        </div>
+        <div class="nav_menu">
+            <a href="{% url 'index:ranking'%}">랭킹</a>
+        </div>
+        <!--검색창-->
+        <form id="searchForm" method="get" action="{% url 'index:data' %}">
+            <input type="text" id="kw" name="kw" autocomplete="off" placeholder="옷 종류를 입력하세요." style="background-color:white;"/>
+            <ul class="output" style="display:none;">
+            </ul>
+            <button type="submit" id="submit" style="background-color:transparent;"><i class="fa fa-search" style="color : white;"></i>
+            </button>
+        </form>
+    </div>
+</nav>
+
 <main class="main users chart-page" id="skip-target">
     <div class="container">
-        <a href="{% url 'index:data'%}"><strong style="color:red">분석 바로가기</strong></a>
         <div class="row">
             <div class="col-lg-12">
                 <SELECT onchange="Show_hidden(this.value);">
@@ -13,8 +42,8 @@
                     <option value="3">패딩</option>
                 </SELECT>
 
-                <h2 id="test_1" style="display:block;">상의 종합 랭킹 TOP 10</h2>
-                <h2 id="test_2" style="display:none;">하의 종합 랭킹 TOP 10</h2>
+                <h2 class="title" id="test_1" style="display:block;">상의 종합 랭킹 TOP 10</h2>
+                <h2 class="title" id="test_2" style="display:none;">하의 종합 랭킹 TOP 10</h2>
 
                 <div id="t_1" style="display: block;" class="container">
                     {% for ranking in ranking_list %}
@@ -57,7 +86,9 @@
         </div>
     </div>
 </main>
+</body>
 <!-- ! Main 끝 부분 -->
+
 {% endblock %}
 
 {% block script %}
@@ -80,6 +111,7 @@
         }
       }
     }
-  </script>
+
+</script>
 
 {% endblock %}

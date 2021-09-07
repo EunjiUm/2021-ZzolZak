@@ -8,18 +8,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- pybo CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'search.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 {% block content %}
-<form id="searchForm" method="get" action="{% url 'index:data' %}">
-    <input type="text" id="kw" name="kw" autocomplete="off" placeholder="옷 종류를 입력하세요."/>
-    <ul class="output" style="display:none;">
-    </ul>
-    <button type="submit" id="submit">Search</button>
-</form>
+<!--상단 nav-->
+<nav class="navbar navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="{% url 'index:search'%}">꿀트렌드</a>
+        </div>
+    </div>
+</nav>
+
+<!--header-->
+
+<header class="header">
+    <div class="page">
+        <h1>유행하는 패션 트렌드를<br>한눈에.</h1>
+        <form id="searchForm" method="get" action="{% url 'index:data' %}">
+            <input type="text" id="kw" name="kw" autocomplete="off" style="border:0 solid black;"
+                   placeholder="옷 종류를 입력하세요."/>
+            <ul class="output" style="display:none;">
+            </ul>
+            <button type="submit" id="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+</header>
+
+</body>
 {% endblock %}
 <!-- 기본 템플릿 안에 삽입될 내용 End -->
-</body>
+
 <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
 <script src="{% static 'assets/vendor/search.js' %}"></script>
 </html>
@@ -31,5 +51,10 @@ $(document).ready(function(){
         $("#searchForm").submit();
     });
 });
+
+
+
+
+
 </script>
 {% endblock %}
