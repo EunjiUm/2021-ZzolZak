@@ -36,13 +36,14 @@ a{
 }
 
 hr{
-  margin: 20px 0px 20px 0px;
+
   border-top: 1px solid #666;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .title{
   font-size: 25px;
+  margin: 20px 0 40px 0;
   font-family: "Godo", sans-serif;
   color: rgb(50, 50, 50);
   text-align: center;
@@ -53,6 +54,7 @@ hr{
   font-size: 1rem;
   margin : 0 auto;
   width:100%
+  border-radius: 15px 15px 15px 15px;
 }
 
 tr{
@@ -118,3 +120,17 @@ tr{
     z-index: 1;
 }
 
+.footer_box{
+  text-align : center;
+  height:110px;
+  width:100%;
+  background:black;
+  color: white;
+  padding: 2em 0 2em 2em;
+}
+
+.footer_header{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1em;
+}

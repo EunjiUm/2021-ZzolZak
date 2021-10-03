@@ -5,9 +5,11 @@
     <!-- pybo CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'data.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 </head>
 <body>
+
 <!--상단 nav-->
 <nav class="navbar navbar-fixed-top">
     <div class="container">
@@ -19,18 +21,19 @@
         </div>
         <!--검색창-->
         <form id="searchForm" method="get" action="{% url 'index:data' %}">
-            <input type="text" id="kw" name="kw" autocomplete="off" placeholder="옷 종류를 입력하세요." />
+            <input type="text" id="kw" name="kw" autocomplete="off" placeholder="옷 종류를 입력하세요."/>
             <ul class="output" style="display:none;">
             </ul>
-            <button  type="submit" id="submit" style="background-color:transparent;"><i class="fa fa-search" style="color : white;"></i>
+            <button type="submit" id="submit" style="background-color:transparent;"><i class="fa fa-search"
+                                                                                       style="color : white;"></i>
             </button>
         </form>
     </div>
 </nav>
 <div class="result-navbar">
     <div class="result-container">
-    <h2 class="header">{{keyword}}에 대한 검색 결과입니다.</h2>
-        </div>
+        <h2 class="header">{{keyword}}에 대한 검색 결과입니다.</h2>
+    </div>
 </div>
 
 <div class="container">
@@ -40,9 +43,12 @@
 
     <!--입기 좋은 달 추천-->
     <div class="month_data">
-        <div class="month_box"><span class="iconWrapper"><i class="far fa-calendar-alt fa-lg"></i></span>{{month_1}}월</div>
-        <div class="month_box"><span class="iconWrapper"><i class="far fa-calendar-alt fa-lg"></i></span>{{month_2}}월</div>
-        <div class="month_box"><span class="iconWrapper"><i class="far fa-calendar-alt fa-lg"></i></span>{{month_3}}월</div>
+        <div class="month_box col-sm-3"><span class="iconWrapper"><i class="far fa-calendar-alt fa-lg"></i></span>{{month_1}}월
+        </div>
+        <div class="month_box col-sm-3"><span class="iconWrapper"><i class="far fa-calendar-alt fa-lg"></i></span>{{month_2}}월
+        </div>
+        <div class="month_box col-sm-3"><span class="iconWrapper"><i class="far fa-calendar-alt fa-lg"></i></span>{{month_3}}월
+        </div>
     </div>
 
     <!--패션지수 그래프-->
@@ -56,45 +62,55 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container" >
     <h2 class="main-title">감성어 분석</h2>
-        <div class="container">
-        <div class="col-xl-8 col-lg-12 d3 d3_graph">
-            <!-- d3 그래프 삽입 부분-->
-        </div>
-    </div>
-    <h2 style="text-align: center;">긍정:{{positive_value}}%, 부정:{{negative_value}}%, 중립:{{neutral_value}}%</h2>
-    <div class="col-xl-4 col-lg-12 d3_data">
-        <div class="d3_box">
-            <table border="1">
-                <thead>
-                <tr>
-                    <th>랭킹</th>
-                    <th>감성어</th>
-                    <th>언급량</th>
-                    <th>분류</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% if sent_list %}
-                {% for sent in sent_list %}
-                <tr class="text-center">
-                    <td>{{ sent.id }}위</td>
-                    <td class="text-center">
-                        {{ sent.word }}
-                    </td>
-                    <td>{{ sent.value}}</td>
-                    <td>
-                        {{ sent.group }}
-                    </td>
-                </tr>
-                {% endfor %}
-                {% endif %}
-                </tbody>
-            </table>
+    <div class="container">
+        <div class="col-md-8 d3_graph" aria-label="Site statistics">
+            <div>
+            <!--d3 상세정보 버튼-->
+            <div class="d3_detail_box" align="right">
+                <div><a href="javascript:doDisplay();"><i class="fas fa-ellipsis-h"></i></a></div>
+                <div class="d3_data" id="test_div">
+                    <div id="d3_box">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>랭킹</th>
+                                <th>감성어</th>
+                                <th>언급량</th>
+                                <th>분류</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% if sent_list %}
+                            {% for sent in sent_list %}
+                            <tr class="text-center">
+                                <td>{{ sent.id }}위</td>
+                                <td class="text-center">
+                                    {{ sent.word }}
+                                </td>
+                                <td>{{ sent.value}}</td>
+                                <td>
+                                    {{ sent.group }}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            {% endif %}
+                            </tbody>
+                        </table>
 
+                    </div>
+                </div>
+            </div>
+
+            <!-- d3 그래프 삽입 부분-->
+            <div class="d3"></div>
+                </div>
+            <h2 style="text-align: center;">긍정:{{positive_value}}%, 부정:{{negative_value}}%, 중립:{{neutral_value}}%</h2>
         </div>
     </div>
+
+
 </div>
 
 <!--원분보기-->
@@ -151,17 +167,18 @@
                 </ul>
             </section>
         </div>
-
     </div>
-
 </div>
 
-</body>
-<footer>
-    <div>
-        <h3> Footer 부분입니다.</h3>
+<footer >
+    <div class="footer_box">
+        <p class="footer_header">꿀트렌드</p>
+        <p>Copyrightⓒ 2021. 아기돼지삼형제. All rights reserved.</p>
     </div>
 </footer>
+
+</body>
+
 {% endblock %}
 
 {% block script %}
@@ -237,6 +254,13 @@
     });
 
 
+
+
+
+
+
+
+
 </script>
 
 <!--d3 그래프-->
@@ -252,8 +276,8 @@
             {% endif %}
             ],
         };
-        var width = 1280,
-            height = 500;
+        var width = 940,
+            height = 490;
 
         var force = d3.layout.force()
             .charge(-1200)
@@ -300,6 +324,13 @@
                 return "translate(" + d.x + "," + d.y + ")";
             });
         });
+
+
+
+
+
+
+
 
 
 
@@ -370,6 +401,13 @@
 });
 
 
+
+
+
+
+
+
+
 </script>
 
 <script type='text/javascript'>
@@ -383,11 +421,22 @@ $(document).ready(function(){
 
 
 
+</script>
 
+<script>
+    var bDisplay=true;
+    function doDisplay(){
+        var con=document.getElementById("test_div");
+        if(con.style.display=='none'){
+            con.style.display='block';
+        }
+        else{
+            con.style.display='none';
+        }
+    }
 
 
 
 </script>
-
 {% endblock %}
 
