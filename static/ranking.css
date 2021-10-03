@@ -118,8 +118,12 @@ tr{
     border-top: 0.1rem solid rgb(231, 231, 231);
     left: 0rem;
     z-index: 1;
+<<<<<<< HEAD
+}
+=======
 }
 
+<<<<<<< HEAD
 .footer_box{
   text-align : center;
   height:110px;
@@ -134,3 +138,6 @@ tr{
     font-weight: bold;
     margin-bottom: 1em;
 }
+=======
+>>>>>>> bf7177e76718b411780248501a1e6c5c3044dec1
+>>>>>>> 5fb80d2921b501d92380ed6dc21395bf400693c1

@@ -65,14 +65,17 @@ a{
   font-family: "Godo", sans-serif;
   color: rgb(50, 50, 50);
   text-align: center;
-  margin-top : 20px;
-}
 
+<<<<<<< HEAD
 .row{
   margin : 0 auto;
   width: 80%;
   border-radius: 15px;
+=======
+>>>>>>> 5fb80d2921b501d92380ed6dc21395bf400693c1
 }
+
+
 
 .month_data{
   display: flex;
@@ -129,6 +132,7 @@ a{
   border-radius : 15px;
 }
 
+<<<<<<< HEAD
 .d3_detail_box{
   margin-right:15px;
   position:absolute ;
@@ -168,3 +172,9 @@ border-bottom: 1px solid #444444;
     margin-bottom: 1em;
 }
 
+=======
+.d3_box{
+  background-color:#cfd3d3;
+  border-radius : 15px;
+}
+>>>>>>> 5fb80d2921b501d92380ed6dc21395bf400693c1
