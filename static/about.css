@@ -1,0 +1,127 @@
+body{ background-color: white;}
+
+@font-face{
+ font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+ font-size: 14px;
+}
+
+.navbar{
+  min-height: 70px;
+  background-color : black;
+  color : white;
+  border: none;
+  box-shadow: 0 .15rem 1.75rem 0 rgba(33,40,50,.15)
+}
+
+.nav_menu{
+  align-items: center;
+  display: flex;
+  float : left;
+}
+
+#searchForm{
+ float: right;
+  padding-top : 15px;
+}
+
+.navbar-header{
+  align-items: center;
+  display: flex;
+  float : left;
+}
+
+.result-navbar{
+  background-color : white;
+  -webkit-box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+  padding: 0;
+  height: 4.57rem;
+}
+
+.result-container{
+  margin-top: 25px;
+  position : absolute;
+  margin-left : 10%;
+}
+
+.container{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a{
+  padding: 30px 39px;
+}
+
+i{
+  color:#337ab7;
+}
+
+.box{
+  margin-top:30px;
+  box-model: border-box;
+  border: 3px solid transparent;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-muted {
+    color: #777;
+}
+
+.title{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+
+h1, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h4{
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+h4, h5{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+p {
+   line-height: 1.43;
+    margin: 0 0 10px;
+}
+
+#data-text{
+  text-align:center;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.footer_box{
+  margin:0 auto; text-align:center;
+  width:100%;
+  height:auto;
+  background:black;
+  color: white;
+  padding: 1.1em 0;
+
+}
+
+.footer_header{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1em;
+}

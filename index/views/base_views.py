@@ -1654,3 +1654,6 @@ def ranking(request):
 
 def search(request):
     return render(request, 'index/search.html')
+
+def about(request):
+    return render(request, 'index/about.html')

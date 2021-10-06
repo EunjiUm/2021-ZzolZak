@@ -7,138 +7,134 @@
     <link href="//db.onlinewebfonts.com/c/162bea5982a433fdc612cb3a93d902f9?family=Godo+B" rel="stylesheet"
           type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
 <!-- ! Main 시작 부분 -->
 <body>
-<!--상단 nav-->
-<nav class="navbar navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <a href="{% url 'index:search'%}">꿀트렌드</a>
-        </div>
-        <div class="nav_menu">
-            <a href="{% url 'index:ranking'%}">랭킹</a>
-        </div>
-        <!--검색창-->
-        <form id="searchForm" method="get" action="{% url 'index:data' %}">
-            <input type="text" id="kw" name="kw" autocomplete="off" placeholder="옷 종류를 입력하세요."
-                   style="background-color:white;"/>
-            <ul class="output" style="display:none;">
-            </ul>
-            <button type="submit" id="submit" style="background-color:transparent;"><i class="fa fa-search"
-                                                                                       style="color : white;"></i>
-            </button>
-        </form>
+<div class="result-navbar">
+    <div class="result-container">
+        <h2 class="header">Fashion Ranking</h2>
     </div>
-</nav>
+</div>
+<div class="row1">
+    <div class="col-md-8 text-center" style="margin: 0 auto;">
+        <div class="box service-box">
 
-<main class="main users chart-page" id="skip-target">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <SELECT onchange="Show_hidden(this.value);">
-                    <option value="1">소분류</option>
-                    <option value="2">코트</option>
-                    <option value="3">패딩</option>
-                </SELECT>
+            <h2 class="title">랭킹 점수</h2>
+            <div class="rank_graph">
+                <p class="rank_detail"><strong>랭킹 점수</strong>는 쇼핑몰 사이트의 좋아요 개수와 계절 점수를 통해 데이터 수집 일자 기준으로<br>
+                    사람들에게 가장 주목받는 의류 품목을 랭킹 순으로 보여줍니다.
+                </p>
+                <div style="text-align:center;"><img src="media/formula.png"></div>
 
-                <h2 class="title" id="test_1" style="display:block;">상의 종합 랭킹 TOP 10</h2>
-                <h2 class="title" id="test_2" style="display:none;">하의 종합 랭킹 TOP 10</h2>
-
-                <!--랭킹-->
-                <div style="display: block;" class="container">
-                    {% for ranking in ranking_list %}
-                    <table class="table">
-                        <tbody>
-                        <tr>
-                            <td class="td_1">
-                                <h2>{{ forloop.counter }}</h2>
-                            </td>
-
-                            <td class="td_2">
-                                <img src="{{ranking.ranking_img.url}}" width="100%" height="100%"/>
-                            </td>
-<<<<<<< HEAD
-
-                            <td class="td_3">
-                                <h2>{{ranking.ranking_name}}</h2>
-                            </td>
-
-                            <td class="td_4">
-                                <h2>랭킹 점수 : {{ranking.ranking_score}}</h2>
-                            </td>
-                        </tr>
-
-=======
-
-                            <td class="td_3">
-                                <h2>{{ranking.ranking_name}}</h2>
-                            </td>
-
-                            <td class="td_4">
-                                <h2>랭킹 점수 : {{ranking.ranking_score}}</h2>
-                            </td>
-                        </tr>
-
->>>>>>> bf7177e76718b411780248501a1e6c5c3044dec1
-                        <tr>
-                            <td class="td_1">
-                                <h2>1</h2>
-                            </td>
-                            <td class="td_2">
-                                <img src="{% static 'assets/2.jpg' %}" width="100%" height="100%"/>
-                            </td>
-                            <td class="td_3">
-                                <h2>미니원피스</h2>
-                            </td>
-                            <td class="td_4">
-                                <h2>랭킹 점수 : 88</h2>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td_1">
-                                <h2>1</h2>
-                            </td>
-                            <td class="td_2">
-                                <img src="{% static 'assets/2.jpg' %}" width="100%" height="100%"/>
-                            </td>
-                            <td class="td_3">
-                                <h2>미니원피스</h2>
-                            </td>
-                            <td class="td_4">
-                                <h2>랭킹 점수 : 88</h2>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td_1">
-                                <h2>1</h2>
-                            </td>
-                            <td class="td_2">
-                                <img src="{% static 'assets/2.jpg' %}" width="100%" height="100%"/>
-                            </td>
-                            <td class="td_3">
-                                <h2>미니원피스</h2>
-                            </td>
-                            <td class="td_4">
-                                <h2>랭킹 점수 : 88</h2>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    {% endfor %}
-                </div>
             </div>
         </div>
     </div>
-</main>
-<footer>
-    <div class="footer_box">
-        <p class="footer_header">꿀트렌드</p>
-        <p>Copyrightⓒ 2021. 아기돼지삼형제. All rights reserved.</p>
+
+    <div class="row2">
+        <main class="main users chart-page" id="skip-target">
+            <div class="container">
+                <div class="row3" style="margin:0 auto;">
+            <div class="star"><i class="fa fa-3x fa-thumbs-o-up wow bounceIn text-primary"
+                                 style="visibility: visible; animation-name: bounceIn;"></i></div>
+                    <div class="rank_title" style="margin:0 auto;">
+                        <div style="align-items:center;">
+                            <!--랭킹 타이틀-->
+                            <h2 class="title" id="test_1" style="display:block;">상의 종합 랭킹 TOP 10</h2>
+                            <h2 class="title" id="test_2" style="display:none;">하의 종합 랭킹 TOP 10</h2>
+                            <h2 class="title" id="test_3" style="display:none;">패딩 종합 랭킹 TOP 10</h2>
+                        </div>
+
+                        <div style="right:0; bottom:0; margin-bottom:60px; ">
+                            <!--옵션 선택-->
+                            <SELECT class="rank_option" onchange="Show_hidden(this.value);">
+                                <option value="1">소분류</option>
+                                <option value="2">코트</option>
+                                <option value="3">패딩</option>
+
+                            </SELECT>
+                        </div>
+
+                    </div>
+
+                    <!--랭킹-->
+                    <div class="col-13">
+                        <div class="container rank_graph">
+                            {% for ranking in ranking_list %}
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td class="td_1 col-13">
+                                        <h2>{{ forloop.counter }}</h2>
+                                    </td>
+                                    <td class="td_2">
+                                        <img src="{{ranking.ranking_img.url}}" width="100%" height="100%"/>
+                                    </td>
+                                    <td class="td_3">
+                                        <h2>{{ranking.ranking_name}}</h2>
+                                    </td>
+                                    <td class="td_4">
+                                        <h2>랭킹 점수  {{ranking.ranking_score}}</h2>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="td_1">
+                                        <h2>2</h2>
+                                    </td>
+                                    <td class="td_2">
+                                        <img src="{% static 'assets/2.jpg' %}" width="100%" height="100%"/>
+                                    </td>
+                                    <td class="td_3">
+                                        <h2>미니원피스</h2>
+                                    </td>
+                                    <td class="td_4">
+                                        <h2>랭킹 점수  88</h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td_1">
+                                        <h2>3</h2>
+                                    </td>
+                                    <td class="td_2">
+                                        <img src="{% static 'assets/2.jpg' %}" width="100%" height="100%"/>
+                                    </td>
+                                    <td class="td_3">
+                                        <h2>미니원피스</h2>
+                                    </td>
+                                    <td class="td_4">
+                                        <h2>랭킹 점수  88</h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td_1">
+                                        <h2>4</h2>
+                                    </td>
+                                    <td class="td_2">
+                                        <img src="{% static 'assets/2.jpg' %}" width="100%" height="100%"/>
+                                    </td>
+                                    <td class="td_3">
+                                        <h2>미니원피스</h2>
+                                    </td>
+                                    <td class="td_4">
+                                        <h2>랭킹 점수  88</h2>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
     </div>
-</footer>
+</div>
+</main>
+
 </body>
 
 <!-- ! Main 끝 부분 -->
@@ -165,17 +161,14 @@
         }
       }
     }
-<<<<<<< HEAD
-=======
 
 
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> bf7177e76718b411780248501a1e6c5c3044dec1
->>>>>>> 5fb80d2921b501d92380ed6dc21395bf400693c1
+
+
+
 </script>
 {% endblock %}

@@ -31,28 +31,71 @@ body{ background-color: #F3F3F3;}
   float : left;
 }
 
+.result-navbar{
+  background-color : white;
+  -webkit-box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+  padding: 0;
+  height: 4.57rem;
+}
+
+.result-container{
+  margin-top: 25px;
+  position : absolute;
+  margin-left : 10%;
+}
+
 a{
   padding: 30px 39px;
 }
 
-hr{
 
-  border-top: 1px solid #666;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+.star{
+  padding:30px 0 10px 0;
+  margin:0 auto;
 }
-
 .title{
-  font-size: 25px;
-  margin: 20px 0 40px 0;
+  font-size: 35px;
+  margin: 60px 0 15px 0;
   font-family: "Godo", sans-serif;
   color: rgb(50, 50, 50);
   text-align: center;
 }
 
+
+.row1 {
+ width:70%;
+margin: 0 auto;
+}
+
+.row2{
+ width:80%;
+margin: 0 auto;
+}
+.rank_option{
+ float:right;
+}
+
+.rank_detail{
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.rank_graph{
+  padding-top: 80px;
+  background-color: white;
+  border-radius : 15px 15px 15px 15px;
+  margin : 0 auto;
+  box-shadow: 0 .15rem 1.75rem 0 rgba(33,40,50,.15)
+}
+
+
 .table{
   border-spacing: 0px;
   font-size: 1rem;
   margin : 0 auto;
+  padding-top:10px;
   width:100%
   border-radius: 15px 15px 15px 15px;
 }
@@ -118,19 +161,17 @@ tr{
     border-top: 0.1rem solid rgb(231, 231, 231);
     left: 0rem;
     z-index: 1;
-<<<<<<< HEAD
-}
-=======
+
 }
 
-<<<<<<< HEAD
 .footer_box{
-  text-align : center;
-  height:110px;
+  margin:0 auto; text-align:center;
   width:100%;
+  height:auto;
   background:black;
   color: white;
-  padding: 2em 0 2em 2em;
+  padding: 1.1em 0;
+
 }
 
 .footer_header{
@@ -138,6 +179,4 @@ tr{
     font-weight: bold;
     margin-bottom: 1em;
 }
-=======
->>>>>>> bf7177e76718b411780248501a1e6c5c3044dec1
->>>>>>> 5fb80d2921b501d92380ed6dc21395bf400693c1
+

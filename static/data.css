@@ -65,25 +65,24 @@ a{
   font-family: "Godo", sans-serif;
   color: rgb(50, 50, 50);
   text-align: center;
+  margin-top:30px;
+}
 
-<<<<<<< HEAD
 .row{
   margin : 0 auto;
   width: 80%;
   border-radius: 15px;
-=======
->>>>>>> 5fb80d2921b501d92380ed6dc21395bf400693c1
+  padding-bottom:20px;
 }
-
-
 
 .month_data{
   display: flex;
   justify-content: center;
 }
-
-
-
+@media (max-width: 600px)
+.month_data {
+  flex-direction: column;
+}
 .iconWrapper{
     padding : 0.5rem;
     width: 5.5rem;
@@ -97,14 +96,14 @@ a{
 }
 
 .month_box{
-  max-width:300px;
+  max-width:333px;
   box-sizing: border-box;
   padding : 2rem;
   background-color: #cfd3d3;
   border-radius : 15px 15px 15px 15px;
   box-shadow: rgb(0 0 0 / 12%) 0px 0.2rem 0.3rem 0px;
   background-color : #fff;
-  margin : 0 15px 2.4rem 15px;
+  margin : 0 15px 2rem 15px;
   font-size : 20px;
 }
 
@@ -117,7 +116,7 @@ a{
 }
 
 .d3_graph{
-  max-width: 68%;
+  max-width: 75%;
   padding: 20px 0;
   background-color: white;
   border-radius : 15px 15px 15px 15px;
@@ -132,49 +131,92 @@ a{
   border-radius : 15px;
 }
 
-<<<<<<< HEAD
 .d3_detail_box{
   margin-right:15px;
   position:absolute ;
   right:0;
-  background-color: #f4f4f4;
   z-index:2;
   border: 1px solid #f0f0f0;
   box-shadow: 0 4px 100px rgb(46 58 89 / 8%);
   border-radius: 20px;
   height: auto;
 }
+
 table{
-  border-top: 1px solid #444444;
   border-collapse: collapse;
+  width: 100%;
+  font-size: 18px;
 }
-th, td{
-border-bottom: 1px solid #444444;
+
+th{
+ line-height: 1.4;
+ padding: 5px;
+ line-height: 1.4;
+  background-color:white;
+ border-bottom: 1px solid #e5e5e5;
+}
+
+td{
  padding: 5px;
  background-color:white;
 }
 
 
-
 .footer_box{
-  text-align : center;
-  height:110px;
+  margin:0 auto; text-align:center;
   width:100%;
+  height:auto;
   background:black;
   color: white;
-  padding: 2em 0 2em 2em;
+  padding: 1.1em 0;
+
+}
+
+.text-center{
+  text-align:center;
 }
 
 
+.three_box{
+  display: flex;
+  align-items: center;
+}
+
+.column{
+    width: 100%;
+    margin: 0.2em 0;
+    line-height: 2;
+    margin:10px;
+    padding:5px;
+    background-color:#fff;
+    font-size: 20px;
+}
+
+.box_cell{
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid rgba(50, 50, 50, 0.2);
+}
+
+#positive{
+  color:red;
+}
+
+#neutral{
+  color:#F7941D;
+}
+#negative{
+  color:#007aff;
+}
 .footer_header{
     font-size: 1.1rem;
     font-weight: bold;
     margin-bottom: 1em;
 }
 
-=======
+
 .d3_box{
   background-color:#cfd3d3;
   border-radius : 15px;
 }
->>>>>>> 5fb80d2921b501d92380ed6dc21395bf400693c1
+

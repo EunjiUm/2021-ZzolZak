@@ -6,12 +6,16 @@
         <div class="nav_menu">
             <a href="{% url 'index:ranking'%}">랭킹</a>
         </div>
+        <div class="nav_menu">
+            <a href="{% url 'index:about'%}">ABOUT</a>
+        </div>
         <!--검색창-->
         <form id="searchForm" method="get" action="{% url 'index:data' %}">
-            <input type="text" id="kw" name="kw" autocomplete="off" placeholder="옷 종류를 입력하세요." />
+            <input type="text" id="kw" name="kw" autocomplete="off" placeholder="옷 종류를 입력하세요."/>
             <ul class="output" style="display:none;">
             </ul>
-            <button  type="submit" id="submit" style="background-color:transparent;"><i class="fa fa-search" style="color : white;"></i>
+            <button type="submit" id="submit" style="background-color:transparent;"><i class="fa fa-search"
+                                                                                       style="color : white;"></i>
             </button>
         </form>
     </div>

@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'about.css' %}">
+    <link href="//db.onlinewebfonts.com/c/162bea5982a433fdc612cb3a93d902f9?family=Godo+B" rel="stylesheet"
+          type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="result-navbar">
+    <div class="result-container">
+        <h2 class="header">About Project</h2>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h3 class="section-heading-t title">Our Team</h3>
+            <hr class="primary hr-service">
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-sm-4">
+            <div class="team-member">
+                <img src="media/team1.png" class="img-responsive img-circle" alt="" width="50%"
+                     style="display: block; margin: 0 auto;">
+                <h4>엄은지</h4>
+                <p class="text-muted">Project leader</p>
+                <p class="text-muted-m">um0114@gmail.com</p>
+
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="team-member">
+                <img src="media/team2.png" class="img-responsive img-circle" alt="" width="50%"
+                     style="display: block; margin: 0 auto;">
+                <h4>정채은</h4>
+                <p class="text-muted">Front-end developer</p>
+                <p class="text-muted-m">yllowrose452@naver.com</p>
+
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="team-member">
+                <img src="media/team3.png" class="img-responsive img-circle" alt="" width="50%"
+                     style="display: block; margin: 0 auto;">
+                <h4>오준호</h4>
+                <p class="text-muted">Back-end developer</p>
+                <p class="text-muted-m">quietgong@naver.com</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="primary hr-service">
+
+</div>
+<div class=" container">
+    <div class="row">
+        <div class=" col-lg-12 col-md-12 text-center">
+            <div class="box service-box">
+                <i class="fa fa-5x fa-line-chart wow bounceIn text-primary"
+                   style="visibility: visible; animation-name: bounceIn;"></i>
+
+                <h3 class="title">"패션지수"</h3>
+                <div class="col-lg-12 col-md-12 text-center">
+                    <div class="box service-box">
+                        <p class="text-muted" style="font-size: 1.25em;">
+                            리뷰 작성 날짜를 크롤링하여 작성 날짜 데이터를 그래프로 표현하고, <br>가장 높은 상위 3개의 달(month)을 출력합니다. </p>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-md-12 text-center">
+                    <i class="fa fa-5x fa-heart wow bounceIn text-primary"
+                       style="visibility: visible; animation-name: bounceIn;"></i>
+
+                    <h3 class="title">"감성어 분석"</h3>
+                    <p class="text-muted" style="font-size: 1.25em;">
+                        리뷰 데이터 중 감성어를 분석하여 긍정, 부정, 중립의 감성어가 <br>차지하는 비율과 가장 많이 언급된 감성어 top10 개를 보여줍니다. </p>
+
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 text-center">
+                <div class="box service-box">
+                    <i class="fa fa-5x fa-thumbs-o-up wow bounceIn text-primary"
+                       style="visibility: visible; animation-name: bounceIn;"></i>
+
+                    <h3 class="title">"랭킹 분석"</h3>
+                    <img src="media/formula.png">
+                    <p class="text-muted" style="font-size: 1.25em;">
+                        쇼핑몰 사이트의 좋아요 개수와 계절 점수를 통해 데이터 수집 일자 기준으로 <br>사람들에게 가장 주목받는 의류 품목을 랭킹 순으로 보여줍니다. </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="primary hr-service">
+</div>
+
+
+<div class="row">
+
+    <div class="col-lg-8 col-lg-offset-2" style="margin:0 auto; display:flex;padding-right:0;">
+        <p class="text-muted" style="text-align:center;  margin : 0 auto; padding:10px 0 20px 0;"><strong>2021 충북대학교
+            소프트웨어학과 졸업작품</strong><br>Developed by
+            / HTML, CSS / D3.js, chart.js / Django Framework</p>
+    </div>
+</div>
+</body>
+
+</html>
+
+
+{% endblock %}
