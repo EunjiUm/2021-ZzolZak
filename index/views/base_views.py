@@ -1640,7 +1640,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    else: # 품목 리스트에 없는 단어를 입력했을때
+    elif keyword not in product_list: # 품목 리스트에 없는 단어를 입력했을때
         return render(request, 'index/search.html')
 
 

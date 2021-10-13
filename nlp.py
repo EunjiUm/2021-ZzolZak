@@ -17,14 +17,15 @@ def Data_Nlp(product):
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:\\trendanalyzer-314714-b95748a6864c.json"
     top_word_count = 10
     # 파일 리스트
-    filepath = "data/" + product + ".txt"
-
-    file = open(filepath, 'r', encoding='utf-8')
-    lines = file.readlines()
+    company_list = ['musinsa', 'ssf', 'seoulstore']
     reviews = []
-    for line in lines:
-        reviews.append(line)
-    file.close()
+    for company in company_list:
+        filepath = "data/" + company + "_" + product + ".txt"
+        file = open(filepath, 'r', encoding='utf-8')
+        lines = file.readlines()
+        for line in lines:
+            reviews.append(line)
+        file.close()
 
     positive_value = 0
     neutral_value = 0
@@ -51,16 +52,18 @@ def Data_Nlp(product):
 
     total_value = positive_value + negative_value + neutral_value
 
-    positive_value = int(positive_value / total_value * 100)
-    negative_value = int(negative_value / total_value * 100)
-    neutral_value = int(neutral_value / total_value * 100)
+    try:
+        positive_value = int(positive_value / total_value * 100)
+        negative_value = int(negative_value / total_value * 100)
+        neutral_value = int(neutral_value / total_value * 100)
+    except ZeroDivisionError:
+        positive_value = 0
+        neutral_value = 0
+        negative_value = 0
 
     # 형용사만 추출하여 감정분석
-    file = open(filepath, 'r', encoding='utf-8')
-    reviews = file.read()
-
     okt = Okt()
-    pos = okt.pos(reviews)
+    pos = okt.pos(''.join(reviews))
 
     adj_list = []
     for word, tag in pos:
@@ -121,8 +124,8 @@ def Data_Nlp(product):
     elif product == "":
         pass
 
-
     print("NLP 종료")
+
 
 print("분석할 옷의 이름을 영어로 입력해주세요 (예시) shirt")
 product = input()
