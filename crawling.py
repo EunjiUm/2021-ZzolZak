@@ -26,6 +26,8 @@ def code_matching(company, product):
                 goods_code = "002024"
             else:
                 goods_code = "002009"
+        elif product == "slacks":
+            goods_code = "003008"
 
         return goods_code
     elif company == "seoulstore":
@@ -36,8 +38,13 @@ def code_matching(company, product):
                 goods_code = "1165"
             else:
                 goods_code = "1066"
-        elif product == "":
-            pass
+        elif product == "slacks":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1134"
+            else:
+                goods_code = "1027"
 
         return goods_code
 
@@ -52,8 +59,16 @@ def code_matching(company, product):
                 goods_code = "SFMA41A07A02A02"
                 ssf_goods_code = "Trench-Coats"
 
-        elif product == "":
-            pass
+        elif product == "slacks":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "SFMA42A04A02"
+                ssf_goods_code = "Formal"
+            else:
+                goods_code = "SFMA41A04A02A01"
+                ssf_goods_code = "Long-Midi"
+
         return goods_code, ssf_goods_code
 
 
@@ -275,8 +290,9 @@ def ssf_crawling(goods_code, ssf_goods_code, like):
 
     url = "https://www.ssfshop.com/" + ssf_goods_code + "/list?dspCtgryNo=" + goods_code
     driver.get(url)
+    driver.refresh()
+    sleep(2)
     total_num = int(driver.find_element_by_xpath("//*[@id=\"godTotalCount\"]").text.replace("(", "").replace(")", "").replace(",", ""))  # 상품 갯수
-
     if total_num <= 60:
         total_page = 1
     elif total_num % 60 == 0:
@@ -320,7 +336,7 @@ def ssf_crawling(goods_code, ssf_goods_code, like):
                     driver.find_element_by_xpath('//*[@id="searchGoodsReviewList"]/ul/li/dl/dd/div[3]/em[2]').text).split(".")
                 review = review.replace('\n', ' ')
                 f.write(review + " (작성날짜:")  # 해당 사이트의 옷 리뷰 txt 파일 쓰기
-                f.write(str(int(review_date.split('.')[1]) - 1) + '월)\n')
+                f.write(str(int(review_date[1]) - 1) + '월)\n')
             elif total_review <= 10:  # 리뷰가 10개 이하일 때
                 for i in range(1, total_review + 1):
                     review = (driver.find_element_by_xpath(
@@ -330,7 +346,7 @@ def ssf_crawling(goods_code, ssf_goods_code, like):
                             '//*[@id="searchGoodsReviewList"]/ul/li[' + str(i) + ')]/dl/dd/div[3]/em[2]').text).split(".")
                     review = review.replace('\n', ' ')
                     f.write(review + " (작성날짜:")  # 해당 사이트의 옷 리뷰 txt 파일 쓰기
-                    f.write(str(int(review_date.split('.')[1]) - 1) + '월)\n')
+                    f.write(str(int(review_date[1]) - 1) + '월)\n')
             else:  # 리뷰가 11개 이상일 때
                 if total_review % 10 == 0:
                     total_review_page = total_review // 10
@@ -352,10 +368,10 @@ def ssf_crawling(goods_code, ssf_goods_code, like):
                             "//*[@id=\"searchGoodsReviewList\"]/ul/li[" + str(i) + "]/dl/dd/div[2]").text)
                         review_date = (
                             driver.find_element_by_xpath(
-                                '//*[@id="searchGoodsReviewList"]/ul/li[' + str(i) + ')]/dl/dd/div[3]/em[2]').text).split(".")
+                                '//*[@id="searchGoodsReviewList"]/ul/li[' + str(i) + ']/dl/dd/div[3]/em[2]').text).split(".")
                         review = review.replace('\n', ' ')
                         f.write(review + " (작성날짜:")  # 해당 사이트의 옷 리뷰 txt 파일 쓰기
-                        f.write(str(int(review_date.split('.')[1]) - 1) + '월)\n')
+                        f.write(str(int(review_date[1]) - 1) + '월)\n')
 
             driver.get(page_url)
     driver.close()

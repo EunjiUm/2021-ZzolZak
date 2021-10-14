@@ -121,8 +121,25 @@ def Data_Nlp(product):
                 value=nodes[i]["value"],
                 group=nodes[i]["group"],
             ).save()
-    elif product == "":
-        pass
+    elif product == "slacks":
+        SentValue_slacks(
+            positive_value=positive_value,
+            negative_value=negative_value,
+            neutral_value=neutral_value,
+        ).save()
+        nodes = []
+        for i in range(top_word_count):
+            node = dict()
+            node["word"] = word_list[i]
+            node["value"] = frequency_list[i]
+            node["group"] = group_list[i]
+            nodes.append(node)
+
+            SentScore_slacks(
+                word=nodes[i]["word"],
+                value=nodes[i]["value"],
+                group=nodes[i]["group"],
+            ).save()
 
     print("NLP 종료")
 

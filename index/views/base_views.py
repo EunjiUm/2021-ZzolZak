@@ -90,6 +90,56 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
+    elif keyword == "슬랙스":
+        musinsa_review_list = Review_musinsa_slacks.objects.all()
+        seoulstore_review_list = Review_seoulstore_slacks.objects.all()
+        ssf_review_list = Review_ssf_slacks.objects.all()
+        sent_value = SentValue_slacks.objects.values()
+        sent_list = SentScore_slacks.objects.all()
+        Jan = FashionScore_slacks[0]['Jan']
+        Feb = FashionScore_slacks[0]['Feb']
+        Mar = FashionScore_slacks[0]['Mar']
+        Apr = FashionScore_slacks[0]['Apr']
+        May = FashionScore_slacks[0]['May']
+        June = FashionScore_slacks[0]['June']
+        July = FashionScore_slacks[0]['July']
+        Aug = FashionScore_slacks[0]['Aug']
+        Sep = FashionScore_slacks[0]['Sep']
+        Oct = FashionScore_slacks[0]['Oct']
+        Nov = FashionScore_slacks[0]['Nov']
+        Dec = FashionScore_slacks[0]['Dec']
+        month_1 = FashionScore_slacks[0]['month_1']
+        month_2 = FashionScore_slacks[0]['month_2']
+        month_3 = FashionScore_slacks[0]['month_3']
+        positive_value = sent_value[0]['positive_value']
+        negative_value = sent_value[0]['negative_value']
+        neutral_value = sent_value[0]['neutral_value']
+        context = {
+            'Jan': Jan,
+            'Feb': Feb,
+            'Mar': Mar,
+            'Apr': Apr,
+            'May': May,
+            'June': June,
+            'July': July,
+            'Aug': Aug,
+            'Sep': Sep,
+            'Oct': Oct,
+            'Nov': Nov,
+            'Dec': Dec,
+            'keyword': keyword,
+            'musinsa_review_list': musinsa_review_list,
+            'seoulstore_review_list': seoulstore_review_list,
+            'ssf_review_list': ssf_review_list,
+            'month_1': month_1,
+            'month_2': month_2,
+            'month_3': month_3,
+            'positive_value': positive_value,
+            'negative_value': negative_value,
+            'neutral_value': neutral_value,
+            'sent_list': sent_list
+        }
+        return render(request, 'index/data.html', context)
     elif keyword == "coat":
         musinsa_review_list = Review_musinsa_coat.objects.all()
         seoulstore_review_list = Review_seoulstore_coat.objects.all()
@@ -890,56 +940,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "slacks":
-        musinsa_review_list = Review_musinsa_slacks.objects.all()
-        seoulstore_review_list = Review_seoulstore_slacks.objects.all()
-        ssf_review_list = Review_ssf_slacks.objects.all()
-        sent_value = SentValue_slacks.objects.values()
-        sent_list = SentScore_slacks.objects.all()
-        Jan = FashionScore_slacks[0]['Jan']
-        Feb = FashionScore_slacks[0]['Feb']
-        Mar = FashionScore_slacks[0]['Mar']
-        Apr = FashionScore_slacks[0]['Apr']
-        May = FashionScore_slacks[0]['May']
-        June = FashionScore_slacks[0]['June']
-        July = FashionScore_slacks[0]['July']
-        Aug = FashionScore_slacks[0]['Aug']
-        Sep = FashionScore_slacks[0]['Sep']
-        Oct = FashionScore_slacks[0]['Oct']
-        Nov = FashionScore_slacks[0]['Nov']
-        Dec = FashionScore_slacks[0]['Dec']
-        month_1 = FashionScore_slacks[0]['month_1']
-        month_2 = FashionScore_slacks[0]['month_2']
-        month_3 = FashionScore_slacks[0]['month_3']
-        positive_value = sent_value[0]['positive_value']
-        negative_value = sent_value[0]['negative_value']
-        neutral_value = sent_value[0]['neutral_value']
-        context = {
-            'Jan': Jan,
-            'Feb': Feb,
-            'Mar': Mar,
-            'Apr': Apr,
-            'May': May,
-            'June': June,
-            'July': July,
-            'Aug': Aug,
-            'Sep': Sep,
-            'Oct': Oct,
-            'Nov': Nov,
-            'Dec': Dec,
-            'keyword': keyword,
-            'musinsa_review_list': musinsa_review_list,
-            'seoulstore_review_list': seoulstore_review_list,
-            'ssf_review_list': ssf_review_list,
-            'month_1': month_1,
-            'month_2': month_2,
-            'month_3': month_3,
-            'positive_value': positive_value,
-            'negative_value': negative_value,
-            'neutral_value': neutral_value,
-            'sent_list': sent_list
-        }
-        return render(request, 'index/data.html', context)
+
     elif keyword == "short_pants":
         musinsa_review_list = Review_musinsa_short_pants.objects.all()
         seoulstore_review_list = Review_seoulstore_short_pants.objects.all()

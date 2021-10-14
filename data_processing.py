@@ -43,9 +43,7 @@ for i in range(1, len(month_list)):
     else:
         month_list[i] = month_list[i - 1] + 1
 
-# 계절 지수 값의 범위 : -6 <= season_score <= 0
-season_score = -(abs(month_list.index(month_1) - month_list.index(datetime.today().month)))
-
+season_score = abs(month_list.index(month_1)-month_list.index(datetime.today().month))+1
 # 각종 데이터 DB에 저장
 if company == "musinsa":
     if product == "trench_coat":
@@ -62,7 +60,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_trench_coat(
@@ -82,7 +80,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_coat(
@@ -102,7 +100,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_padded_jacket(
@@ -122,7 +120,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_military(
@@ -142,7 +140,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_blazer(
@@ -162,7 +160,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_leather_jacket(
@@ -182,7 +180,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_fur_jacket(
@@ -202,7 +200,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_short_sleeve_jacket(
@@ -222,7 +220,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_long_sleeve_jacket(
@@ -242,7 +240,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_shirt(
@@ -262,7 +260,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_blouse(
@@ -282,7 +280,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_neat(
@@ -302,7 +300,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_hoodie(
@@ -322,7 +320,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_sweat_shirt(
@@ -342,7 +340,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_denim_pants(
@@ -362,7 +360,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_mini_skirt(
@@ -382,7 +380,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_skirt(
@@ -402,7 +400,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_slacks(
@@ -422,7 +420,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_short_pants(
@@ -442,7 +440,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_sports_wear(
@@ -462,7 +460,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_leggings(
@@ -482,7 +480,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_sports_shoes(
@@ -502,7 +500,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_sandal(
@@ -522,7 +520,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_heel(
@@ -542,7 +540,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_loafers(
@@ -562,7 +560,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_walker(
@@ -582,7 +580,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_dress(
@@ -602,7 +600,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_back_pack(
@@ -622,7 +620,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_tote_bag(
@@ -642,7 +640,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_clutch_bag(
@@ -662,7 +660,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_shoulder_bag(
@@ -682,7 +680,7 @@ if company == "musinsa":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_musinsa_eco_bag(
@@ -704,7 +702,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_trench_coat(
@@ -724,7 +722,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_coat(
@@ -744,7 +742,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_padded_jacket(
@@ -764,7 +762,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_military(
@@ -784,7 +782,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_blazer(
@@ -804,7 +802,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_leather_jacket(
@@ -824,7 +822,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_fur_jacket(
@@ -844,7 +842,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_short_sleeve_jacket(
@@ -864,7 +862,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_long_sleeve_jacket(
@@ -884,7 +882,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_shirt(
@@ -904,7 +902,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_blouse(
@@ -924,7 +922,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_neat(
@@ -944,7 +942,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_hoodie(
@@ -964,7 +962,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_sweat_shirt(
@@ -984,7 +982,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_denim_pants(
@@ -1004,7 +1002,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_mini_skirt(
@@ -1024,7 +1022,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_skirt(
@@ -1044,7 +1042,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_slacks(
@@ -1064,7 +1062,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_short_pants(
@@ -1084,7 +1082,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_sports_wear(
@@ -1104,7 +1102,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_leggings(
@@ -1124,7 +1122,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_sports_shoes(
@@ -1144,7 +1142,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_sandal(
@@ -1164,7 +1162,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_heel(
@@ -1184,7 +1182,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_loafers(
@@ -1204,7 +1202,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_walker(
@@ -1224,7 +1222,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_dress(
@@ -1244,7 +1242,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_back_pack(
@@ -1264,7 +1262,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_tote_bag(
@@ -1284,7 +1282,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_clutch_bag(
@@ -1304,7 +1302,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_shoulder_bag(
@@ -1324,7 +1322,7 @@ elif company == "seoulstore":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_seoulstore_eco_bag(
@@ -1346,7 +1344,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_trench_coat(
@@ -1366,7 +1364,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_coat(
@@ -1386,7 +1384,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_padded_jacket(
@@ -1406,7 +1404,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_military(
@@ -1426,7 +1424,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_blazer(
@@ -1446,7 +1444,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_leather_jacket(
@@ -1466,7 +1464,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_fur_jacket(
@@ -1486,7 +1484,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_short_sleeve_jacket(
@@ -1506,7 +1504,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_long_sleeve_jacket(
@@ -1526,7 +1524,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_shirt(
@@ -1546,7 +1544,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_blouse(
@@ -1566,7 +1564,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_neat(
@@ -1586,7 +1584,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_hoodie(
@@ -1606,7 +1604,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_sweat_shirt(
@@ -1626,7 +1624,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_denim_pants(
@@ -1646,7 +1644,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_mini_skirt(
@@ -1666,7 +1664,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_skirt(
@@ -1686,7 +1684,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_slacks(
@@ -1706,7 +1704,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_short_pants(
@@ -1726,7 +1724,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_sports_wear(
@@ -1746,7 +1744,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_leggings(
@@ -1766,7 +1764,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_sports_shoes(
@@ -1786,7 +1784,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_sandal(
@@ -1806,7 +1804,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_heel(
@@ -1826,7 +1824,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_loafers(
@@ -1846,7 +1844,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_walker(
@@ -1866,7 +1864,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_dress(
@@ -1886,7 +1884,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_back_pack(
@@ -1906,7 +1904,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_tote_bag(
@@ -1926,7 +1924,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_clutch_bag(
@@ -1946,7 +1944,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_shoulder_bag(
@@ -1966,7 +1964,7 @@ elif company == "ssf":
             Oct=origin_list[9],
             Nov=origin_list[10],
             Dec=origin_list[11],
-            ranking_score=like // len(list_file) * season_score
+            ranking_score=int(like / len(list_file) / season_score)
         ).save()
         for i in range(len(list_file)):
             Review_ssf_eco_bag(
