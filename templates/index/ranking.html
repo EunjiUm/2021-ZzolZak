@@ -40,21 +40,8 @@
             <div class="rank_title" style="margin:0 auto;">
                 <div style="align-items:center;">
                     <!--랭킹 타이틀-->
-                    <h2 class="title" id="test_1" style="display:block;">상의 종합 랭킹 TOP 10</h2>
-                    <h2 class="title" id="test_2" style="display:none;">하의 종합 랭킹 TOP 10</h2>
-                    <h2 class="title" id="test_3" style="display:none;">패딩 종합 랭킹 TOP 10</h2>
+                    <h2 class="title" id="test_1" style="display:block;">종합 랭킹 TOP 10</h2>
                 </div>
-
-                <div style="right:0; bottom:0; margin-bottom:60px; ">
-                    <!--옵션 선택-->
-                    <SELECT class="rank_option" onchange="Show_hidden(this.value);">
-                        <option value="1">소분류</option>
-                        <option value="2">코트</option>
-                        <option value="3">패딩</option>
-
-                    </SELECT>
-                </div>
-
             </div>
 
             <!--랭킹-->
@@ -77,49 +64,6 @@
                                 <h2>랭킹 점수 {{ranking.ranking_score}}</h2>
                             </td>
                         </tr>
-
-                        <tr>
-                            <td class="td_1">
-                                <h2>2</h2>
-                            </td>
-                            <td class="td_2">
-                                <img src="{% static 'assets/2.jpg' %}" width="100%" height="100%"/>
-                            </td>
-                            <td class="td_3">
-                                <h2>미니원피스</h2>
-                            </td>
-                            <td class="td_4">
-                                <h2>랭킹 점수 88</h2>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td_1">
-                                <h2>3</h2>
-                            </td>
-                            <td class="td_2">
-                                <img src="{% static 'assets/2.jpg' %}" width="100%" height="100%"/>
-                            </td>
-                            <td class="td_3">
-                                <h2>미니원피스</h2>
-                            </td>
-                            <td class="td_4">
-                                <h2>랭킹 점수 88</h2>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td_1">
-                                <h2>4</h2>
-                            </td>
-                            <td class="td_2">
-                                <img src="{% static 'assets/2.jpg' %}" width="100%" height="100%"/>
-                            </td>
-                            <td class="td_3">
-                                <h2>미니원피스</h2>
-                            </td>
-                            <td class="td_4">
-                                <h2>랭킹 점수 88</h2>
-                            </td>
-                        </tr>
                         </tbody>
                     </table>
                     {% endfor %}
@@ -128,46 +72,8 @@
         </div>
     </div>
 </div>
-
-</div>
-</div>
-</main>
-
 </body>
 
 <!-- ! Main 끝 부분 -->
 
-{% endblock %}
-
-{% block script %}
-<script language="JavaScript">
-    function Show_hidden(e) {
-      var menu_1 = new Array("test_1", "test_2", "test_3", "test_4", "test_5"); // 객체 배열로 지정
-      var menu_2 = new Array("t_1", "t_2", "t_3", "t_4", "t_5"); // 객체 배열로 지정
-      for (var i = 0; i < menu_1.length; i++) {
-        if ("test_" + e == menu_1[i]) {
-          document.all[menu_1[i]].style.display = "block";
-        } else {
-          document.all[menu_1[i]].style.display = "none";
-        }
-      }
-      for (var i = 0; i < menu_2.length; i++) {
-        if ("t_" + e == menu_2[i]) {
-          document.all[menu_2[i]].style.display = "block";
-        } else {
-          document.all[menu_2[i]].style.display = "none";
-        }
-      }
-    }
-
-
-
-
-
-
-
-
-
-
-</script>
 {% endblock %}
