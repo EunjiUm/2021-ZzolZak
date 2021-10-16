@@ -79,6 +79,14 @@ a{
   display: flex;
   justify-content: center;
 }
+
+.month_box_rank
+{
+  font-size:15px;
+  margin-bottom: 1rem;
+  color:gray;
+
+}
 @media (max-width: 600px)
 .month_data {
   flex-direction: column;
