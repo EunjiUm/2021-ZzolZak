@@ -245,6 +245,7 @@ def seoulstore_crawling(goods_code, goods_links, like):
         product_id = goods_links[i][36:r_idx]
         print(i + 1, "번째 상품의 리뷰 정보를 수집중입니다...", end='')
         print("(", review_num[i], "개의 리뷰)")
+        print("누적 좋아요 개수 : ", like)
         goods_links[i] = goods_links[i].replace("detail", "reviews")
         driver.get(goods_links[i])
         sleep(2)
@@ -278,7 +279,6 @@ def seoulstore_crawling(goods_code, goods_links, like):
                 f.write(str(int(review_date.split('.')[1]) - 1) + '월)\n')
             except:
                 continue
-    print("좋아요 개수 : ", like)
     driver.close()
 
 
@@ -292,7 +292,8 @@ def ssf_crawling(goods_code, ssf_goods_code, like):
     driver.get(url)
     driver.refresh()
     sleep(2)
-    total_num = int(driver.find_element_by_xpath("//*[@id=\"godTotalCount\"]").text.replace("(", "").replace(")", "").replace(",", ""))  # 상품 갯수
+    total_num = int(driver.find_element_by_xpath("//*[@id=\"godTotalCount\"]").text.replace("(", "").replace(")", "").replace(",",
+                                                                                                                              ""))  # 상품 갯수
     if total_num <= 60:
         total_page = 1
     elif total_num % 60 == 0:
@@ -303,6 +304,7 @@ def ssf_crawling(goods_code, ssf_goods_code, like):
     for i in range(1, total_page + 1):
         i = str(i)
         print(f"상품의 {i}번 페이지입니다.")
+        print("누적 좋아요 개수 : ", like)
         page_url = url + '&currentPage=' + i
         driver.get(page_url)
         review_tag_num = []
@@ -379,7 +381,7 @@ def ssf_crawling(goods_code, ssf_goods_code, like):
 
 print("크롤링할 사이트와 옷의 이름을 영어로 입력해주세요 (예시) musinsa shirt")
 company, product = map(str, input().split())
-f = open("data/" + company + "_" + product + ".txt", 'a+', encoding='utf-8')  # .txt 파일은 미리 생성해놔야 함
+f = open("data/" + company + "_" + product + ".txt", 'a+', encoding='utf-8')
 
 goods_links = []  # 개별 상품의 url 주소를 저장하는 배열
 like = 0  # 좋아요 개수
