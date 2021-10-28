@@ -31,9 +31,9 @@ body{ background-color: #F3F3F3;;}
 }
 
 .navbar-header{
-  align-items: center;
-  display: flex;
   float : left;
+  line-height: 100px;
+  text-align:center;
 }
 
 .result-navbar{

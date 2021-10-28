@@ -26,9 +26,9 @@ body{ background-color: #F3F3F3;}
 }
 
 .navbar-header{
-  align-items: center;
-  display: flex;
   float : left;
+  line-height: 100px;
+  text-align:center;
 }
 
 .result-navbar{
@@ -87,6 +87,7 @@ margin: 0 auto;
   background-color: white;
   border-radius : 15px 15px 15px 15px;
   margin : 0 auto;
+  margin-bottom : 50px;
   box-shadow: 0 .15rem 1.75rem 0 rgba(33,40,50,.15)
 }
 
@@ -99,7 +100,7 @@ margin: 0 auto;
   border-spacing: 0px;
   font-size: 1rem;
   margin : 0 auto;
-  padding-top:10px;
+  padding :10px 0;
   width:100%
   border-radius: 15px 15px 15px 15px;
 }
@@ -111,10 +112,9 @@ tr{
 .td_1{
     min-width: 5rem;
     max-width: 20rem;
-    padding: 0.5rem 2.5rem 0.5rem 2rem;
+    padding: 0.5rem 3rem 0.5rem 3rem;
     box-sizing: border-box;
-    word-break: break-all;
-    text-align: left;
+    text-align: center;
     border-right: 0.1rem solid rgb(241, 241, 241);
     width: 5rem;
     border-top: 0.1rem solid rgb(231, 231, 231);
@@ -126,7 +126,7 @@ tr{
     min-width: 20rem;
     max-width: 20rem;
     height: 15rem;
-    padding: 0.5rem 2.5rem 0.5rem 2rem;
+    padding: 0.5rem 2.3rem 0.5rem 2rem;
     box-sizing: border-box;
     word-break: break-all;
     text-align: left;
@@ -141,10 +141,10 @@ tr{
     min-width: 15rem;
     max-width: 20rem;
     height: 15rem;
-    padding: 0.5rem 2.5rem 0.5rem 2rem;
+    padding: 0.5rem 2rem 0.5rem 2rem;
     box-sizing: border-box;
     word-break: break-all;
-    text-align: left;
+    text-align: center;
     border-right: 0.1rem solid rgb(241, 241, 241);
     width: 15rem;
     border-top: 0.1rem solid rgb(231, 231, 231);
