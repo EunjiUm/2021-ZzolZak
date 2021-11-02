@@ -90,7 +90,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "슬랙스":
+    elif keyword == "슬랙스" or keyword == "정장바지" or keyword == "밴딩슬랙스" or keyword == "슬렉스":
         musinsa_review_list = Review_musinsa_slacks.objects.all()
         seoulstore_review_list = Review_seoulstore_slacks.objects.all()
         ssf_review_list = Review_ssf_slacks.objects.all()
@@ -590,7 +590,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "블라우스":
+    elif keyword == "블라우스" or keyword == "슬리브":
         musinsa_review_list = Review_musinsa_blouse.objects.all()
         seoulstore_review_list = Review_seoulstore_blouse.objects.all()
         ssf_review_list = Review_ssf_blouse.objects.all()
@@ -640,7 +640,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "니트":
+    elif keyword == "니트" or keyword == "스웨터" or keyword == "니트조끼" or keyword == "베스트":
         musinsa_review_list = Review_musinsa_neat.objects.all()
         seoulstore_review_list = Review_seoulstore_neat.objects.all()
         ssf_review_list = Review_ssf_neat.objects.all()
@@ -690,7 +690,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "후드":
+    elif keyword == "후드" or keyword == "후드티" or keyword == "후드집업":
         musinsa_review_list = Review_musinsa_hoodie.objects.all()
         seoulstore_review_list = Review_seoulstore_hoodie.objects.all()
         ssf_review_list = Review_ssf_hoodie.objects.all()
@@ -790,7 +790,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "청바지":
+    elif keyword == "청바지" or keyword == "진청" or keyword == "연청" or keyword == "와이드팬츠" or keyword == "스키니진":
         musinsa_review_list = Review_musinsa_denim_pants.objects.all()
         seoulstore_review_list = Review_seoulstore_denim_pants.objects.all()
         ssf_review_list = Review_ssf_denim_pants.objects.all()
@@ -840,7 +840,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "미니스커트":
+    elif keyword == "미니스커트" or keyword == "짧은치마" or keyword == "숏스커트":
         musinsa_review_list = Review_musinsa_mini_skirt.objects.all()
         seoulstore_review_list = Review_seoulstore_mini_skirt.objects.all()
         ssf_review_list = Review_ssf_mini_skirt.objects.all()
@@ -890,7 +890,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "스커트":
+    elif keyword == "스커트" or keyword == "롱스커트" or keyword == "청치마":
         musinsa_review_list = Review_musinsa_skirt.objects.all()
         seoulstore_review_list = Review_seoulstore_skirt.objects.all()
         ssf_review_list = Review_ssf_skirt.objects.all()
@@ -940,7 +940,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "숏팬츠":
+    elif keyword == "숏팬츠" or keyword == "반바지" or keyword == "러닝팬츠" or keyword == "쇼츠":
         musinsa_review_list = Review_musinsa_short_pants.objects.all()
         seoulstore_review_list = Review_seoulstore_short_pants.objects.all()
         ssf_review_list = Review_ssf_short_pants.objects.all()
@@ -990,7 +990,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "트레이닝":
+    elif keyword == "트레이닝" or keyword == "운동복" or keyword == "트레이닝바지" or keyword == "조거팬츠":
         musinsa_review_list = Review_musinsa_sports_wear.objects.all()
         seoulstore_review_list = Review_seoulstore_sports_wear.objects.all()
         ssf_review_list = Review_ssf_sports_wear.objects.all()
@@ -1040,7 +1040,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "레깅스":
+    elif keyword == "레깅스" or keyword == "타이즈" or keyword == "기모레깅스" or keyword == "스타킹":
         musinsa_review_list = Review_musinsa_leggings.objects.all()
         seoulstore_review_list = Review_seoulstore_leggings.objects.all()
         ssf_review_list = Review_ssf_leggings.objects.all()

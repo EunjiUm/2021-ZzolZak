@@ -45,7 +45,221 @@ def code_matching(company, product):
                 goods_code = "1134"
             else:
                 goods_code = "1027"
-
+        elif product == "coat":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                print("오버사이즈코트 : 1 입력, 싱글코트 : 2 입력, 더블브레스티드코트 : 3 입력, 더블코트 : 4 입력")
+                detail = int(input())
+                if detail == 1:
+                    goods_code = "1160"
+                elif detail == 2:
+                    goods_code = "1161"
+                elif detail == 3:
+                    goods_code = "1162"
+                else:
+                    goods_code = "1163"
+            else:
+                print("오버사이즈코트 : 1 입력, 싱글코트 : 2 입력, 더블브레스티드코트 : 3 입력, 더블코트 : 4 입력")
+                detail = int(input())
+                if detail == 1:
+                    goods_code = "1061"
+                elif detail == 2:
+                    goods_code = "1062"
+                elif detail == 3:
+                    goods_code = "1063"
+                else:
+                    goods_code = "1064"
+        elif product == "padded_jacket":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1156"
+            else:
+                goods_code = "1056"
+        elif product == "military":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1150"
+            else:
+                goods_code = "1050"
+        elif product == "blazer":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1155"
+            else:
+                goods_code = "1055"
+        elif product == "leather_jacket":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1148"
+            else:
+                goods_code = "1048"
+        elif product == "fur_jacket":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1157"
+            else:
+                goods_code = "1057"
+        elif product == "short_sleeve_jacket":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1116"
+            else:
+                goods_code = "1003"
+        elif product == "long_sleeve_jacket":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1117"
+            else:
+                goods_code = "1002"
+        elif product == "shirt":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1125"
+            else:
+                goods_code = "1011"
+        elif product == "blouse":
+            goods_code = "1014"
+        elif product == "neat":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1128"
+            else:
+                goods_code = "1015"
+        elif product == "hoodie":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                print("후드1 : 1 입력, 후드2 : 2 입력")
+                detail = int(input())
+                if detail == 1:
+                    goods_code = "1122"
+                else:
+                    goods_code = "1123"
+            else:
+                print("후드1 : 1 입력, 후드2 : 2 입력")
+                detail = int(input())
+                if detail == 1:
+                    goods_code = "1008"
+                else:
+                    goods_code = "1009"
+        elif product == "sweat_shirt":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1124"
+            else:
+                goods_code = "1010"
+        elif product == "denim_pants":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1141"
+            else:
+                goods_code = "1036"
+        elif product == "mini_skirt":
+            goods_code = "1025"
+        elif product == "skirt":
+            goods_code = "1026"
+        elif product == "short_pants":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1136"
+            else:
+                goods_code = "1029"
+        elif product == "sports_wear":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1179"
+            else:
+                goods_code = "1084"
+        elif product == "leggings":
+            goods_code = "1035"
+        elif product == "sports_shoes":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1183"
+            else:
+                goods_code = "1088"
+        elif product == "sandal":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1186"
+            else:
+                goods_code = "1091"
+        elif product == "heel":
+            goods_code = "1092"
+        elif product == "loafers":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1185"
+            else:
+                goods_code = "1090"
+        elif product == "walker":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1184"
+            else:
+                goods_code = "1089"
+        elif product == "dress":
+            print("미니원피스 : 1 입력, 미니/맥스원피스 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1022"
+            else:
+                goods_code = "1023"
+        elif product == "back_pack":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1194"
+            else:
+                goods_code = "1099"
+        elif product == "tote_bag":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1193"
+            else:
+                goods_code = "1098"
+        elif product == "clutch_bag":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1192"
+            else:
+                goods_code = "1097"
+        elif product == "shoulder_bag":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1191"
+            else:
+                goods_code = "1096"
+        elif product == "eco_bag":
+            goods_code = "1190"
+        elif product == "trench_coat":
+            print("남성 옷 크롤링 : 1 입력, 여성 옷 크롤링 : 2 입력")
+            gender = int(input())
+            if gender == 1:
+                goods_code = "1165"
+            else:
+                goods_code = "1066"
         return goods_code
 
     elif company == "ssf":
@@ -125,7 +339,9 @@ def musinsa_crawling(goods_code, goods_links, like):
                     review_date = driver.find_element_by_css_selector(
                         '#wrapStyleEstimateList > div > div:nth-child(' + j + ') > div.review-profile > div > div.review-profile__text > p.review-profile__date').text
                     try:
-                        like += int(driver.find_element_by_xpath(('//*[@id="product-top-like"]/p[2]/span').text).replace(",", ""))
+                        like += int(
+                            driver.find_element_by_xpath(('//*[@id="product-top-like"]/p[2]/span').text).replace(",",
+                                                                                                                 ""))
                     except:
                         like += 0
                     if "일" in review_date or "시간" in review_date:
@@ -160,7 +376,8 @@ def musinsa_crawling(goods_code, goods_links, like):
                                 '#wrapStyleEstimateList > div > div:nth-child(' + j + ') > div.review-profile > div > div.review-profile__text > p.review-profile__date').text  # 리뷰 날짜
                             try:
                                 like += int(
-                                    driver.find_element_by_xpath(('//*[@id="product-top-like"]/p[2]/span').text).replace(",", ""))
+                                    driver.find_element_by_xpath(
+                                        ('//*[@id="product-top-like"]/p[2]/span').text).replace(",", ""))
                             except:
                                 like += 0
                             if "일" in review_date or "시간" in review_date:
@@ -292,8 +509,9 @@ def ssf_crawling(goods_code, ssf_goods_code, like):
     driver.get(url)
     driver.refresh()
     sleep(2)
-    total_num = int(driver.find_element_by_xpath("//*[@id=\"godTotalCount\"]").text.replace("(", "").replace(")", "").replace(",",
-                                                                                                                              ""))  # 상품 갯수
+    total_num = int(
+        driver.find_element_by_xpath("//*[@id=\"godTotalCount\"]").text.replace("(", "").replace(")", "").replace(",",
+                                                                                                                  ""))  # 상품 갯수
     if total_num <= 60:
         total_page = 1
     elif total_num % 60 == 0:
@@ -312,30 +530,35 @@ def ssf_crawling(goods_code, ssf_goods_code, like):
         if int(i) == total_page:  # 마지막 페이지에서
             one_page_max = total_num % 60
         for j in range(1, one_page_max + 1):
-            if driver.find_element_by_xpath("//*[@id=\"dspGood\"]/li[" + str(j) + "]/a/div[2]/span[4]/span/em").text == '':
+            if driver.find_element_by_xpath(
+                    "//*[@id=\"dspGood\"]/li[" + str(j) + "]/a/div[2]/span[4]/span/em").text == '':
                 continue
             else:
                 try:  # 리뷰 있을때
                     driver.find_element_by_xpath('//*[@id="dspGood"]/li[' + str(j) + ']/a/div[2]/span[4]/span[2]')
                     like += int(
-                        driver.find_element_by_xpath("//*[@id=\"dspGood\"]/li[" + str(j) + "]/a/div[2]/span[4]/span/em").text)
+                        driver.find_element_by_xpath(
+                            "//*[@id=\"dspGood\"]/li[" + str(j) + "]/a/div[2]/span[4]/span/em").text)
                     review_tag_num.append(j)
                 except:  # 리뷰 없을때
                     like += int(
-                        driver.find_element_by_xpath("//*[@id=\"dspGood\"]/li[" + str(j) + "]/a/div[2]/span[4]/span/em").text)
+                        driver.find_element_by_xpath(
+                            "//*[@id=\"dspGood\"]/li[" + str(j) + "]/a/div[2]/span[4]/span/em").text)
 
         for j in review_tag_num:
             driver.find_element_by_xpath("//*[@id=\"dspGood\"]/li[" + str(j) + "]/a").send_keys(Keys.ENTER)
             print(j, "번째 상품의 리뷰 정보를 수집중입니다...")
             sleep(1)
             total_review = int(
-                (driver.find_element_by_xpath('//*[@id="review"]/h3[1]/em').text).replace("(", "").replace(")", "").replace(
+                (driver.find_element_by_xpath('//*[@id="review"]/h3[1]/em').text).replace("(", "").replace(")",
+                                                                                                           "").replace(
                     ",", ""))  # 상품 리뷰 최대갯수
             if total_review == 1:  # 리뷰가 1개 있을 때
                 review = (driver.find_element_by_xpath(
                     '//*[@id="searchGoodsReviewList"]/ul/li/dl/dd/div[2]').text)
                 review_date = (
-                    driver.find_element_by_xpath('//*[@id="searchGoodsReviewList"]/ul/li/dl/dd/div[3]/em[2]').text).split(".")
+                    driver.find_element_by_xpath(
+                        '//*[@id="searchGoodsReviewList"]/ul/li/dl/dd/div[3]/em[2]').text).split(".")
                 review = review.replace('\n', ' ')
                 f.write(review + " (작성날짜:")  # 해당 사이트의 옷 리뷰 txt 파일 쓰기
                 f.write(str(int(review_date[1]) - 1) + '월)\n')
@@ -345,7 +568,8 @@ def ssf_crawling(goods_code, ssf_goods_code, like):
                         "//*[@id=\"searchGoodsReviewList\"]/ul/li[" + str(i) + "]/dl/dd/div[2]").text)
                     review_date = (
                         driver.find_element_by_xpath(
-                            '//*[@id="searchGoodsReviewList"]/ul/li[' + str(i) + ')]/dl/dd/div[3]/em[2]').text).split(".")
+                            '//*[@id="searchGoodsReviewList"]/ul/li[' + str(i) + ')]/dl/dd/div[3]/em[2]').text).split(
+                        ".")
                     review = review.replace('\n', ' ')
                     f.write(review + " (작성날짜:")  # 해당 사이트의 옷 리뷰 txt 파일 쓰기
                     f.write(str(int(review_date[1]) - 1) + '월)\n')
@@ -359,7 +583,8 @@ def ssf_crawling(goods_code, ssf_goods_code, like):
                         click_num = review_page
                     else:
                         click_num = review_page + 1
-                    driver.find_element_by_xpath('//*[@id="searchGoodsReviewList"]/div/a[' + str(click_num) + ']').click()
+                    driver.find_element_by_xpath(
+                        '//*[@id="searchGoodsReviewList"]/div/a[' + str(click_num) + ']').click()
                     sleep(1)
                     if review_page == total_review_page:
                         one_review_max = total_review % 10
@@ -370,7 +595,8 @@ def ssf_crawling(goods_code, ssf_goods_code, like):
                             "//*[@id=\"searchGoodsReviewList\"]/ul/li[" + str(i) + "]/dl/dd/div[2]").text)
                         review_date = (
                             driver.find_element_by_xpath(
-                                '//*[@id="searchGoodsReviewList"]/ul/li[' + str(i) + ']/dl/dd/div[3]/em[2]').text).split(".")
+                                '//*[@id="searchGoodsReviewList"]/ul/li[' + str(
+                                    i) + ']/dl/dd/div[3]/em[2]').text).split(".")
                         review = review.replace('\n', ' ')
                         f.write(review + " (작성날짜:")  # 해당 사이트의 옷 리뷰 txt 파일 쓰기
                         f.write(str(int(review_date[1]) - 1) + '월)\n')
