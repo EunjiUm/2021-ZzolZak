@@ -15,6 +15,7 @@ from selenium import webdriver
 def code_matching(company, product):
     global goods_code
     if company == "musinsa":
+        # OUTER
         if product == "trench_coat":
             goods_code = "002008"
         elif product == "coat":
@@ -26,9 +27,98 @@ def code_matching(company, product):
                 goods_code = "002024"
             else:
                 goods_code = "002009"
+        elif product == "padded_jacket":
+            print("롱패딩 : 1 , 숏패딩 : 2")
+            detail = int(input())
+            if detail == 1:
+                goods_code = "002013"
+            elif detail == 2:
+                goods_code = "002012"
+        elif product == "military":
+            goods_code = "002014"
+        elif product == "blazer":
+            goods_code = "002003"
+        elif product == "leather_jacket":
+            goods_code = "002002"
+        elif product == "fur_jacket":
+            goods_code = "002025"
+        # 상의
+        elif product == "short_sleeve_shirt":
+            goods_code="001010"
+        elif product=="long_sleeve_shirt":
+            goods_code="001010"
+        elif product=="shirt":
+            goods_code="001002"
+        elif product=="blouse":
+            goods_code="001002"
+        elif product=="neat":
+            goods_code="001006"
+        elif product=="hoodie":
+            goods_code="001004"
+        elif product=="sweat_shirt":
+            goods_code="001005"
+        # 하의
+        elif product=="denim_pants":
+            goods_code="003002"
+        elif product=="mini_skirt":
+            goods_code="022001"
+        elif product=="skirt":
+            print("미디스커트 : 1 , 롱스커트 : 2")
+            detail = int(input())
+            if detail == 1:
+                goods_code = "022002"
+            elif detail == 2:
+                goods_code = "022003"
         elif product == "slacks":
             goods_code = "003008"
-
+        elif product =="short_pants":
+            goods_code="003009"
+        elif product=="sports_wear":
+            goods_code="003004"
+        elif product=="leggings":
+            goods_code="003005"
+        # 신발
+        elif product=="sports_shoes":
+            goods_code="005006"
+        elif product=="sandal":
+            print("슬리퍼 : 1 , 샌들 : 2")
+            detail = int(input())
+            if detail == 1:
+                goods_code = "005018"
+            elif detail == 2:
+                goods_code = "005004"
+        elif product=="heel":
+            goods_code="005012"
+        elif product=="loafers":
+            print("플랫슈즈 : 1 , 로퍼 : 2")
+            detail = int(input())
+            if detail == 1:
+                goods_code = "005017"
+            elif detail == 2:
+                goods_code = "005011"
+        elif product=="walker":
+            goods_code="005011"
+        # 원피스
+        elif product=="dress":
+            print("미니원피스 : 1 , 미디원피스 : 2 , 맥시원피스 : 3")
+            detail = int(input())
+            if detail == 1:
+                goods_code = "020006"
+            elif detail == 2:
+                goods_code = "020007"
+            elif detail == 3:
+                goods_code = "020008"
+        # 백
+        elif product == "back_pack":
+            goods_code = "004001"
+        elif product == "tote_bag":
+            goods_code = "004015"
+        elif product == "clutch_bag":
+            goods_code = "004005"
+        elif product == "shoulder_bag":
+            goods_code = "004003"
+        elif product == "eco_bag":
+            goods_code = "004014"
         return goods_code
     elif company == "seoulstore":
         if product == "trench_coat":
@@ -72,14 +162,14 @@ def code_matching(company, product):
         return goods_code, ssf_goods_code
 
 
-def musinsa_crawling(goods_code, goods_links, like):
+def musinsa_crawling(goods_code, goods_links):
     url = 'https://search.musinsa.com/category/' + goods_code
     res = requests.get(url)
     soup = BeautifulSoup(res.text, 'lxml')  # lxml HTML parser 사용
 
     total_page = int(soup.find("span", {'class': "totalPagingNum"}).text)  # 상품 페이지 최대갯수
 
-    for i in range(1, total_page + 1):
+    for i in range(1, (total_page + 1)//2):
         i = str(i)
         page_url = 'https://search.musinsa.com/category/' + goods_code + '?device=&d_cat_cd=' + goods_code + '&brand=&rate=&page_kind=search&list_kind=small&sort=pop&sub_sort=&page=' + i + '&display_cnt=90&sale_goods=&ex_soldout=&color=&price1=&price2=&exclusive_yn=&size=&tags=&sale_campaign_yn=&timesale_yn=&q='
         res = requests.get(page_url)
@@ -103,15 +193,20 @@ def musinsa_crawling(goods_code, goods_links, like):
     sleep(1)
     # ---- 팝업체크 끝---- #
     # ---- driver 기본 세팅 끝 ---- #
-
+    like=0
     for i in range(len(goods_links)):
         print(i + 1, "번째 상품의 리뷰 정보를 수집중입니다...")
-        print("좋아요 개수 : ", like)
+        print("누적 좋아요 개수 : ", like)
         driver.get(goods_links[i])
         sleep(2)
         # ---- 리뷰 개수 파싱 시작 ---- #
         review_num = driver.find_element_by_css_selector('#estimate_style').text.split(' ')
         review_num = int(review_num[2].replace('(', '').replace(')', '').replace(',', ''))
+        goods_num = goods_links[i][str(goods_links[i]).rfind("/")+1:]
+        try:
+            like+=int(str(driver.find_element_by_css_selector("#product-top-like > p.product_article_contents.goods_like_" + goods_num + " > span").text).replace(",",""))
+        except:
+            like+=0
         # ---- 리뷰 개수 파싱 끝 ---- #
 
         if review_num != 0:
@@ -124,17 +219,14 @@ def musinsa_crawling(goods_code, goods_links, like):
                     f.write(review + " (작성날짜:")  # 해당 사이트의 옷 리뷰 txt 파일 쓰기
                     review_date = driver.find_element_by_css_selector(
                         '#wrapStyleEstimateList > div > div:nth-child(' + j + ') > div.review-profile > div > div.review-profile__text > p.review-profile__date').text
-                    try:
-                        like += int(driver.find_element_by_xpath(('//*[@id="product-top-like"]/p[2]/span').text).replace(",", ""))
-                    except:
-                        like += 0
-                    if "일" in review_date or "시간" in review_date:
+
+                    if "일" in review_date or "시간" in review_date or "분" in review_date:
                         if (datetime.today().day - 30) < 0:
                             f.write(str(datetime.today().month - 2) + '월)\n')
                         else:
                             f.write(str(datetime.today().month - 1) + '월)\n')
                     else:
-                        f.write([int(review_date.split('.')[1]) - 1] + '월)\n')
+                        f.write(str(int(review_date.split('.')[0]) - 1) + '월)\n')
             else:  # 리뷰 개수 >= 11
                 cnt = 0
                 reviews_per_page = 10
@@ -142,12 +234,14 @@ def musinsa_crawling(goods_code, goods_links, like):
                     for button_num in range(3, 8):  # 3번째 버튼(첫 페이지), 7번째 버튼(끝 페이지)
                         if cnt == review_num:
                             break
-                        button_num = str(button_num)
                         driver.find_element_by_css_selector(
-                            '#wrapStyleEstimateList > div > div.nslist_bottom > div.pagination.textRight > div > a:nth-child(' + button_num + ')').click()
+                            '#wrapStyleEstimateList > div > div.nslist_bottom > div.pagination.textRight > div > a:nth-child(' + str(button_num) + ')').click()
                         sleep(1)
                         if review_num - cnt <= reviews_per_page:  # 마지막 페이지의 경우
-                            reviews_per_page = review_num % 10
+                            if review_num%10==0:
+                                cnt=review_num-10
+                            else:
+                                reviews_per_page = review_num % 10
                         for j in range(1, reviews_per_page + 1):
                             cnt += 1
                             j = str(j)
@@ -158,12 +252,8 @@ def musinsa_crawling(goods_code, goods_links, like):
 
                             review_date = driver.find_element_by_css_selector(
                                 '#wrapStyleEstimateList > div > div:nth-child(' + j + ') > div.review-profile > div > div.review-profile__text > p.review-profile__date').text  # 리뷰 날짜
-                            try:
-                                like += int(
-                                    driver.find_element_by_xpath(('//*[@id="product-top-like"]/p[2]/span').text).replace(",", ""))
-                            except:
-                                like += 0
-                            if "일" in review_date or "시간" in review_date:
+
+                            if "일" in review_date or "시간" in review_date or "분":
                                 if (datetime.today().day - 30) < 0:
                                     f.write(str(datetime.today().month - 2) + '월)\n')
                                 else:
@@ -388,7 +478,7 @@ like = 0  # 좋아요 개수
 
 if company == "musinsa":
     goods_code = code_matching(company, product)
-    musinsa_crawling(goods_code, goods_links, like)
+    musinsa_crawling(goods_code, goods_links)
 elif company == "seoulstore":
     goods_code = code_matching(company, product)
     seoulstore_crawling(goods_code, goods_links, like)

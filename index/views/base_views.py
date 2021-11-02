@@ -1090,7 +1090,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "운동화":
+    elif keyword == "운동화" or keyword == "스니커즈" or keyword == "신발":
         musinsa_review_list = Review_musinsa_sports_shoes.objects.all()
         seoulstore_review_list = Review_seoulstore_sports_shoes.objects.all()
         ssf_review_list = Review_ssf_sports_shoes.objects.all()
@@ -1140,7 +1140,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "샌들":
+    elif keyword == "샌들" or keyword == "슬리퍼":
         musinsa_review_list = Review_musinsa_sandal.objects.all()
         seoulstore_review_list = Review_seoulstore_sandal.objects.all()
         ssf_review_list = Review_ssf_sandal.objects.all()
@@ -1190,7 +1190,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "힐":
+    elif keyword == "힐" or keyword == "하이힐":
         musinsa_review_list = Review_musinsa_heel.objects.all()
         seoulstore_review_list = Review_seoulstore_heel.objects.all()
         ssf_review_list = Review_ssf_heel.objects.all()
@@ -1240,7 +1240,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "로퍼":
+    elif keyword == "로퍼" or keyword == "플랫슈즈":
         musinsa_review_list = Review_musinsa_loafers.objects.all()
         seoulstore_review_list = Review_seoulstore_loafers.objects.all()
         ssf_review_list = Review_ssf_loafers.objects.all()
@@ -1290,7 +1290,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "워커":
+    elif keyword == "워커" or keyword =="부츠":
         musinsa_review_list = Review_musinsa_walker.objects.all()
         seoulstore_review_list = Review_seoulstore_walker.objects.all()
         ssf_review_list = Review_ssf_walker.objects.all()
@@ -1340,7 +1340,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "원피스":
+    elif keyword == "원피스" or keyword == "미니원피스" or keyword == "미디원피스" or keyword == "미디원피스":
         musinsa_review_list = Review_musinsa_dress.objects.all()
         seoulstore_review_list = Review_seoulstore_dress.objects.all()
         ssf_review_list = Review_ssf_dress.objects.all()
@@ -1390,7 +1390,7 @@ def intro(request):
             'sent_list': sent_list
         }
         return render(request, 'index/data.html', context)
-    elif keyword == "백팩":
+    elif keyword == "백팩" or keyword == "가방":
         musinsa_review_list = Review_musinsa_back_pack.objects.all()
         seoulstore_review_list = Review_seoulstore_back_pack.objects.all()
         ssf_review_list = Review_ssf_back_pack.objects.all()
