@@ -7,8 +7,8 @@ django.setup()
 from datetime import datetime
 from index.models import *
 
-companies = ['seoulstore','ssf']
-products = ['trench_coat',
+companies = ['ssf']
+products = [    'trench_coat',
                 'coat',
                 'padded_jacket',
                 'military',
@@ -22,12 +22,29 @@ products = ['trench_coat',
                 'neat',
                 'hoodie',
                 'sweat_shirt',
-                'denim_pants']
-origin_list = [0] * 12
+                'denim_pants',
+                'mini_skirt',
+                'skirt',
+                'slacks',
+                'short_pants',
+                'sports_wear',
+                'leggings',
+                'sports_shoes',
+                'sandal',
+                'heel',
+                'loafers',
+                'walker',
+                'dress',
+                'back_pack',
+                'tote_bag',
+                'clutch_bag',
+                'shoulder_bag',
+                'eco_bag']
 
 for company in companies:
     for product in products:
         print(company,product)
+        origin_list = [0] * 12
         with open("data/" + company + "_" + product + ".txt", 'r', encoding='utf-8') as f:
             list_file = []
             for line in f:
@@ -81,9 +98,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_trench_coat(
                         review=list_file[i]
                     ).save()
@@ -101,9 +118,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_coat(
                         review=list_file[i]
                     ).save()
@@ -121,9 +138,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_padded_jacket(
                         review=list_file[i]
                     ).save()
@@ -141,9 +158,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_military(
                         review=list_file[i]
                     ).save()
@@ -161,9 +178,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_blazer(
                         review=list_file[i]
                     ).save()
@@ -181,9 +198,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_leather_jacket(
                         review=list_file[i]
                     ).save()
@@ -201,9 +218,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_fur_jacket(
                         review=list_file[i]
                     ).save()
@@ -221,9 +238,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_short_sleeve_jacket(
                         review=list_file[i]
                     ).save()
@@ -241,9 +258,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_long_sleeve_jacket(
                         review=list_file[i]
                     ).save()
@@ -261,9 +278,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_shirt(
                         review=list_file[i]
                     ).save()
@@ -281,9 +298,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_blouse(
                         review=list_file[i]
                     ).save()
@@ -301,9 +318,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_neat(
                         review=list_file[i]
                     ).save()
@@ -321,9 +338,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_hoodie(
                         review=list_file[i]
                     ).save()
@@ -341,9 +358,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_sweat_shirt(
                         review=list_file[i]
                     ).save()
@@ -361,9 +378,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_denim_pants(
                         review=list_file[i]
                     ).save()
@@ -381,9 +398,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_mini_skirt(
                         review=list_file[i]
                     ).save()
@@ -401,9 +418,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_skirt(
                         review=list_file[i]
                     ).save()
@@ -421,9 +438,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_slacks(
                         review=list_file[i]
                     ).save()
@@ -441,9 +458,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_short_pants(
                         review=list_file[i]
                     ).save()
@@ -461,9 +478,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_sports_wear(
                         review=list_file[i]
                     ).save()
@@ -481,9 +498,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_leggings(
                         review=list_file[i]
                     ).save()
@@ -501,9 +518,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_sports_shoes(
                         review=list_file[i]
                     ).save()
@@ -521,9 +538,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_sandal(
                         review=list_file[i]
                     ).save()
@@ -541,9 +558,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_heel(
                         review=list_file[i]
                     ).save()
@@ -561,9 +578,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_loafers(
                         review=list_file[i]
                     ).save()
@@ -581,9 +598,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_walker(
                         review=list_file[i]
                     ).save()
@@ -601,9 +618,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_dress(
                         review=list_file[i]
                     ).save()
@@ -621,9 +638,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_back_pack(
                         review=list_file[i]
                     ).save()
@@ -641,9 +658,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_tote_bag(
                         review=list_file[i]
                     ).save()
@@ -661,9 +678,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_clutch_bag(
                         review=list_file[i]
                     ).save()
@@ -681,9 +698,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_shoulder_bag(
                         review=list_file[i]
                     ).save()
@@ -701,9 +718,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_musinsa_eco_bag(
                         review=list_file[i]
                     ).save()
@@ -723,9 +740,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_trench_coat(
                         review=list_file[i]
                     ).save()
@@ -743,9 +760,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_coat(
                         review=list_file[i]
                     ).save()
@@ -763,9 +780,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_padded_jacket(
                         review=list_file[i]
                     ).save()
@@ -783,9 +800,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_military(
                         review=list_file[i]
                     ).save()
@@ -803,9 +820,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_blazer(
                         review=list_file[i]
                     ).save()
@@ -823,9 +840,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_leather_jacket(
                         review=list_file[i]
                     ).save()
@@ -843,9 +860,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_fur_jacket(
                         review=list_file[i]
                     ).save()
@@ -863,9 +880,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_short_sleeve_jacket(
                         review=list_file[i]
                     ).save()
@@ -883,9 +900,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_long_sleeve_jacket(
                         review=list_file[i]
                     ).save()
@@ -903,9 +920,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_shirt(
                         review=list_file[i]
                     ).save()
@@ -923,9 +940,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_blouse(
                         review=list_file[i]
                     ).save()
@@ -943,9 +960,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_neat(
                         review=list_file[i]
                     ).save()
@@ -963,9 +980,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_hoodie(
                         review=list_file[i]
                     ).save()
@@ -983,9 +1000,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_sweat_shirt(
                         review=list_file[i]
                     ).save()
@@ -1003,9 +1020,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_denim_pants(
                         review=list_file[i]
                     ).save()
@@ -1023,9 +1040,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_mini_skirt(
                         review=list_file[i]
                     ).save()
@@ -1043,9 +1060,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_skirt(
                         review=list_file[i]
                     ).save()
@@ -1063,9 +1080,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_slacks(
                         review=list_file[i]
                     ).save()
@@ -1083,9 +1100,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_short_pants(
                         review=list_file[i]
                     ).save()
@@ -1103,9 +1120,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_sports_wear(
                         review=list_file[i]
                     ).save()
@@ -1123,9 +1140,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_leggings(
                         review=list_file[i]
                     ).save()
@@ -1143,9 +1160,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_sports_shoes(
                         review=list_file[i]
                     ).save()
@@ -1163,9 +1180,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_sandal(
                         review=list_file[i]
                     ).save()
@@ -1183,9 +1200,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_heel(
                         review=list_file[i]
                     ).save()
@@ -1203,9 +1220,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_loafers(
                         review=list_file[i]
                     ).save()
@@ -1223,9 +1240,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_walker(
                         review=list_file[i]
                     ).save()
@@ -1243,9 +1260,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_dress(
                         review=list_file[i]
                     ).save()
@@ -1263,9 +1280,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_back_pack(
                         review=list_file[i]
                     ).save()
@@ -1283,9 +1300,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_tote_bag(
                         review=list_file[i]
                     ).save()
@@ -1303,9 +1320,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_clutch_bag(
                         review=list_file[i]
                     ).save()
@@ -1323,9 +1340,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_shoulder_bag(
                         review=list_file[i]
                     ).save()
@@ -1343,9 +1360,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_seoulstore_eco_bag(
                         review=list_file[i]
                     ).save()
@@ -1365,9 +1382,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_trench_coat(
                         review=list_file[i]
                     ).save()
@@ -1385,9 +1402,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_coat(
                         review=list_file[i]
                     ).save()
@@ -1405,9 +1422,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_padded_jacket(
                         review=list_file[i]
                     ).save()
@@ -1425,9 +1442,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_military(
                         review=list_file[i]
                     ).save()
@@ -1445,9 +1462,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_blazer(
                         review=list_file[i]
                     ).save()
@@ -1465,9 +1482,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_leather_jacket(
                         review=list_file[i]
                     ).save()
@@ -1485,9 +1502,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_fur_jacket(
                         review=list_file[i]
                     ).save()
@@ -1505,9 +1522,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_short_sleeve_jacket(
                         review=list_file[i]
                     ).save()
@@ -1525,9 +1542,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_long_sleeve_jacket(
                         review=list_file[i]
                     ).save()
@@ -1545,9 +1562,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_shirt(
                         review=list_file[i]
                     ).save()
@@ -1565,9 +1582,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_blouse(
                         review=list_file[i]
                     ).save()
@@ -1585,9 +1602,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_neat(
                         review=list_file[i]
                     ).save()
@@ -1605,9 +1622,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_hoodie(
                         review=list_file[i]
                     ).save()
@@ -1625,9 +1642,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_sweat_shirt(
                         review=list_file[i]
                     ).save()
@@ -1645,9 +1662,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_denim_pants(
                         review=list_file[i]
                     ).save()
@@ -1665,9 +1682,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_mini_skirt(
                         review=list_file[i]
                     ).save()
@@ -1685,9 +1702,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_skirt(
                         review=list_file[i]
                     ).save()
@@ -1705,9 +1722,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_slacks(
                         review=list_file[i]
                     ).save()
@@ -1725,9 +1742,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_short_pants(
                         review=list_file[i]
                     ).save()
@@ -1745,9 +1762,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_sports_wear(
                         review=list_file[i]
                     ).save()
@@ -1765,9 +1782,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_leggings(
                         review=list_file[i]
                     ).save()
@@ -1785,9 +1802,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_sports_shoes(
                         review=list_file[i]
                     ).save()
@@ -1805,9 +1822,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_sandal(
                         review=list_file[i]
                     ).save()
@@ -1825,9 +1842,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_heel(
                         review=list_file[i]
                     ).save()
@@ -1845,9 +1862,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_loafers(
                         review=list_file[i]
                     ).save()
@@ -1865,9 +1882,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_walker(
                         review=list_file[i]
                     ).save()
@@ -1885,9 +1902,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_dress(
                         review=list_file[i]
                     ).save()
@@ -1905,9 +1922,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_back_pack(
                         review=list_file[i]
                     ).save()
@@ -1925,9 +1942,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_tote_bag(
                         review=list_file[i]
                     ).save()
@@ -1945,9 +1962,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_clutch_bag(
                         review=list_file[i]
                     ).save()
@@ -1965,9 +1982,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_shoulder_bag(
                         review=list_file[i]
                     ).save()
@@ -1985,9 +2002,9 @@ for company in companies:
                     Oct=origin_list[9],
                     Nov=origin_list[10],
                     Dec=origin_list[11],
-                    ranking_score=len(list_file) // season_score
+                    ranking_score=10 // season_score
                 ).save()
-                for i in range(len(list_file)):
+                for i in range(10):
                     Review_ssf_eco_bag(
                         review=list_file[i]
                     ).save()

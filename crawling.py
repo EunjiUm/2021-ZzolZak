@@ -433,18 +433,16 @@ def musinsa_crawling(goods_code, goods_links):
                     f.write(review + " (작성날짜:")  # 해당 사이트의 옷 리뷰 txt 파일 쓰기
                     review_date = driver.find_element_by_css_selector(
                         '#wrapStyleEstimateList > div > div:nth-child(' + j + ') > div.review-profile > div > div.review-profile__text > p.review-profile__date').text
-<<<<<<< HEAD
+
                     try:
                         like += int(
                             driver.find_element_by_xpath(('//*[@id="product-top-like"]/p[2]/span').text).replace(",",
                                                                                                                  ""))
                     except:
                         like += 0
-                    if "일" in review_date or "시간" in review_date:
-=======
 
                     if "일" in review_date or "시간" in review_date or "분" in review_date:
->>>>>>> 1680f3dd30e406d0e76a2ac4e7d035e2ad1e5706
+
                         if (datetime.today().day - 30) < 0:
                             f.write(str(datetime.today().month - 2) + '월)\n')
                         else:
@@ -476,18 +474,14 @@ def musinsa_crawling(goods_code, goods_links):
 
                             review_date = driver.find_element_by_css_selector(
                                 '#wrapStyleEstimateList > div > div:nth-child(' + j + ') > div.review-profile > div > div.review-profile__text > p.review-profile__date').text  # 리뷰 날짜
-<<<<<<< HEAD
+
                             try:
                                 like += int(
                                     driver.find_element_by_xpath(
                                         ('//*[@id="product-top-like"]/p[2]/span').text).replace(",", ""))
                             except:
                                 like += 0
-                            if "일" in review_date or "시간" in review_date:
-=======
-
                             if "일" in review_date or "시간" in review_date or "분":
->>>>>>> 1680f3dd30e406d0e76a2ac4e7d035e2ad1e5706
                                 if (datetime.today().day - 30) < 0:
                                     f.write(str(datetime.today().month - 2) + '월)\n')
                                 else:

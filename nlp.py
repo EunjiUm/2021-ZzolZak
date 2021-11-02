@@ -40,7 +40,7 @@ def NLP(product):
     for line in lines:
         reviews.append(line)
     file.close()
-    reviews = list(set(reviews))
+    reviews = list(set(reviews))[:len(reviews)//2]
 
     positive_value = 0
     negative_value = 0
@@ -681,13 +681,7 @@ def NLP(product):
     print("NLP 종료")
 
 
-product_list = ['trench_coat',
-                'coat',
-                'padded_jacket',
-                'military',
-                'blazer',
-                'leather_jacket',
-                'fur_jacket',
+product_list = [
                 'short_sleeve_jacket',
                 'long_sleeve_jacket',
                 'shirt',

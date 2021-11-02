@@ -1,35 +1,19 @@
-product_list = ['trench_coat',
-                'coat',
-                'padded_jacket',
-                'military',
-                'blazer',
-                'leather_jacket',
-                'fur_jacket',
-                'short_sleeve_jacket',
-                'long_sleeve_jacket',
-                'shirt',
-                'blouse',
-                'neat',
-                'hoodie',
-                'sweat_shirt',
-                'denim_pants',
-                'mini_skirt',
-                'skirt',
-                'slacks',
-                'short_pants',
-                'sports_wear',
-                'leggings',
-                'sports_shoes',
-                'sandal',
-                'heel',
-                'loafers',
-                'walker',
-                'dress',
-                'back_pack',
-                'tote_bag',
-                'clutch_bag',
-                'shoulder_bag',
-                'eco_bag']
-for i in product_list:
-    word = 'CREATE TABLE "index_sentvalue_' + i + '"' + '("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "positive_value" integer unsigned NOT NULL CHECK ("positive_value" >= 0), "neutral_value" integer unsigned NOT NULL CHECK ("neutral_value" >= 0), "negative_value" integer unsigned NOT NULL CHECK ("negative_value" >= 0));'
-    print(word)
+with open("data/" + "seoulstore" + "_" + "short_pants" + ".txt", 'r', encoding='utf-8') as f:
+    list_file = []
+    for line in f:
+        list_file.append(line.replace('\n', ''))
+
+# 중복된 리뷰 제거
+list_file = list(set(list_file))
+origin_list=[0]*12
+for txt in list_file:
+    if len(txt) >= 5:
+        if txt[-1] != ')':
+            continue
+        elif txt[-5] == '0':
+            continue
+        if txt[-3].isdigit() and txt[-4].isdigit():
+            origin_list[int(txt[-4]+txt[-3])-1]+=1
+        elif txt[-3].isdigit() and not txt[-4].isdigit():
+            origin_list[int(txt[-3])-1]+=1
+print(origin_list)
