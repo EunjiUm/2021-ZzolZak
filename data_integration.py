@@ -108,6 +108,7 @@ reviewDate = [0] * 12
 period = 0
 year = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
+
 def save_FashionScore(product):
     if product == "trench_coat":
         for i in range(len(year)):
@@ -1173,7 +1174,84 @@ def save_Ranking(product):
                               'ranking_score'] + FashionScore_ssf_eco_bag[period]['ranking_score']
         ).save()
 
-print("품목 입력")
-product = input()
-save_FashionScore(product)
-save_Ranking(product)
+def txt_Integration():
+    company_list = ['musinsa', 'ssf', 'seoulstore']
+    product_list = ['trench_coat',
+                    'coat',
+                    'padded_jacket',
+                    'military',
+                    'blazer',
+                    'leather_jacket',
+                    'fur_jacket',
+                    'short_sleeve_jacket',
+                    'long_sleeve_jacket',
+                    'shirt',
+                    'blouse',
+                    'neat',
+                    'hoodie',
+                    'sweat_shirt',
+                    'denim_pants',
+                    'mini_skirt',
+                    'skirt',
+                    'slacks',
+                    'short_pants',
+                    'sports_wear',
+                    'leggings',
+                    'sports_shoes',
+                    'sandal',
+                    'heel',
+                    'loafers',
+                    'walker',
+                    'dress',
+                    'back_pack',
+                    'tote_bag',
+                    'clutch_bag',
+                    'shoulder_bag',
+                    'eco_bag']
+    for product in product_list:
+        file = open("data/" + product + ".txt", 'w', encoding='utf-8')
+        for company in company_list:
+            filepath = "data/" + company + "_" + product + ".txt"
+            f = open(filepath, 'r', encoding='utf-8')
+            for line in f.readlines():
+                file.write(line)
+            f.close()
+        file.close()
+
+
+#txt_Integration()
+product_list = ['trench_coat',
+                    'coat',
+                    'padded_jacket',
+                    'military',
+                    'blazer',
+                    'leather_jacket',
+                    'fur_jacket',
+                    'short_sleeve_jacket',
+                    'long_sleeve_jacket',
+                    'shirt',
+                    'blouse',
+                    'neat',
+                    'hoodie',
+                    'sweat_shirt',
+                    'denim_pants',
+                    'mini_skirt',
+                    'skirt',
+                    'slacks',
+                    'short_pants',
+                    'sports_wear',
+                    'leggings',
+                    'sports_shoes',
+                    'sandal',
+                    'heel',
+                    'loafers',
+                    'walker',
+                    'dress',
+                    'back_pack',
+                    'tote_bag',
+                    'clutch_bag',
+                    'shoulder_bag',
+                    'eco_bag']
+for product in product_list:
+    save_FashionScore(product)
+    save_Ranking(product)
