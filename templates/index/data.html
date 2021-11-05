@@ -258,7 +258,7 @@
             height = 490;
 
         var force = d3.layout.force()
-            .charge(-600)
+            .charge(-700)
             .size([width, height]);
 
         var svg = d3.select("div.d3").append("svg")
@@ -273,7 +273,7 @@
             .data(graph.nodes)
             .enter().append("circle")
             .attr("class", "node")
-            .attr("r", function (d) { return d.value * 10})
+            .attr("r", function (d) { return d.value*10})
             .style("fill", function (d) {
                 if(d.group == "긍정") // 긍정에 대한 색깔
                     return 'rgb(103, 150, 220)';
@@ -290,7 +290,7 @@
             .attr("class", "label")
             .attr("fill", "white")
             .attr("text-anchor", "middle")
-            .attr("font-size", function(d) { return d.value * 5})
+            .attr("font-size", function(d) { return d.value*5})
             .text(function (d) { return d.name; });
 
         force.on("tick", function () {

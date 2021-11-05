@@ -1,30 +1,20 @@
 import os
-
 import django
-
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", 'config.settings')
 django.setup()
 import re
 from collections import Counter
-import pandas as pd
 from konlpy.tag import Okt
 from index.models import *
 
-stopwords = pd.read_csv(
-    "https://raw.githubusercontent.com/yoonkt200/FastCampusDataset/master/korean_stopwords.txt").values.tolist()
-stopwords.append("같아요")
-stopwords.append("입니다")
-stopwords.append("있어서")
-stopwords.append("있는")
-stopwords.append("좋습니다")
-stopwords.append("같아서")
-stopwords.append("좋을")
-stopwords.append("있어요")
 with open("C:/negative_words_self.txt", encoding='utf-8') as neg:
     negative = neg.readlines()
 
 with open("C:/positive_words_self.txt", encoding='utf-8') as pos:
     positive = pos.readlines()
+
+with open("stopwords.txt", encoding='utf-8') as f:
+    stopwords = f.read().splitlines()
 
 negative = [neg.replace("\n", "") for neg in negative]
 positive = [pos.replace("\n", "") for pos in positive]
@@ -51,7 +41,7 @@ def NLP(product):
     corpus = okt.pos(''.join(reviews))
 
     for word, tag in corpus:
-        if tag in ['Adjective']:
+        if tag in ['Adjective'] and word not in stopwords:
             adj_list.append(word)
 
     for adj in adj_list:
@@ -80,7 +70,6 @@ def NLP(product):
     frequency_list = []
     group_list = []
     counter = Counter(adj_list)
-    counter = Counter({x: counter[x] for x in counter if x not in stopwords})
     counts = Counter({x: counter[x] for x in counter if len(x) > 1})
 
     for i in range(top_word_count):
@@ -678,10 +667,9 @@ def NLP(product):
                 value=nodes[i]['value'],
                 group=nodes[i]['group'],
             ).save()
-    print("NLP 종료")
-
 
 product_list = [
+                'fur_jacket',
                 'short_sleeve_jacket',
                 'long_sleeve_jacket',
                 'shirt',
@@ -709,3 +697,5 @@ product_list = [
                 'eco_bag']
 for product in product_list:
     NLP(product)
+print("-"*50)
+print("NLP 종료")
